@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/tux.svg">
-    <title>Linux - Ďakujeme</title>
+    <title>Linux</title>
 </head>
 
 <body>
@@ -22,33 +22,20 @@
             <img src="img/menu.png" alt="ikona-hamburger-menu">
             </button>
             <div class="dropdown-content">
-                <a href="index.html">Domov</a>
-                <a href="o_linuxe.html">O Linuxe</a>
-                <a href="distribucie.html">Distribúcie</a>
-                <a href="komunita.html">Komunita</a>
-                <a href="kontakt.html">Kontakt</a>
+                <a href="index.php">Domov</a>
+                <a href="o_linuxe.php">O Linuxe</a>
+                <a href="distribucie.php">Distribúcie</a>
+                <a href="komunita.php">Komunita</a>
+                <a href="kontakt.php">Kontakt</a>
                 <!-- Logo (mobil) -->
                 <img id="tux_nav_mobile" src="img/tux.svg" alt="ikona-maskot-linuxu">
             </div>
         </div>
         <!-- Target nenastavený umýselne, aby sa linky podstránok otvorili v aktuálnej karte -->
-        <a href="index.html">Domov</a>
-        <a href="o_linuxe.html">O Linuxe</a>
-        <a href="distribucie.html">Distribúcie</a>
-        <a href="komunita.html">Komunita</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="index.php">Domov</a>
+        <a href="o_linuxe.php">O Linuxe</a>
+        <a href="distribucie.php">Distribúcie</a>
+        <a href="komunita.php">Komunita</a>
+        <a href="kontakt.php">Kontakt</a>
     </nav>
 </header>
-
-<main>
-    <h1 class="dakujeme">Ďakujeme</h1><br><br><br><br><br>
-</main>
-
-<footer>
-    <p>©2023; Projekt Linux; Nadizajnoval - Erik Škultéty</p>
-    <!-- Každá podstránka má zoznam zdrojov, ktoré boli pre jej tvorbu využité, žiadna neobsahuje všetky zdroje naraz -->
-</footer>
-<script src="js/app.js"></script>
-
-</body>
-</html>
