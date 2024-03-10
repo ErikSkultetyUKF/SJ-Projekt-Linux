@@ -1,5 +1,5 @@
 <?php
-    include "partials/header.php";
+    include_once("partials/header.php");
 ?>
 
 <main>
@@ -46,14 +46,6 @@
     <img class="distro_img" src="img/opensuseleap.png" alt="opensuse-leap"></div>
 </main>
 
-<footer>
-    <p>©2023; Projekt Linux; Nadizajnoval - Erik Škultéty</p>
-    <!-- Každá podstránka má zoznam zdrojov, ktoré boli pre jej tvorbu využité, žiadna neobsahuje všetky zdroje naraz -->
-    <p>Zdroje:</p>
-    <a href="https://www.linux.com/what-is-linux/" target="_blank">https://www.linux.com/what-is-linux/</a><br>
-    <a href="https://www.atatus.com/blog/top-10-linux-distros/" target="_blank">https://www.atatus.com/blog/top-10-linux-distros/</a>
-</footer>
-<script src="js/app.js"></script>
-
-</body>
-</html>
+<?php
+    include_once("partials/footer.php");
+?>

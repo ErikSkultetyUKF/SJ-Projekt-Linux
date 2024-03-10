@@ -1,5 +1,5 @@
 <?php
-    include "partials/header.php";
+    include_once("partials/header.php");
 ?>
 
 <main>
@@ -24,11 +24,6 @@
     </form>
 </main>
 
-<footer>
-    <p>©2023; Projekt Linux; Nadizajnoval - Erik Škultéty</p>
-    <!-- Každá podstránka má zoznam zdrojov, ktoré boli pre jej tvorbu využité, žiadna neobsahuje všetky zdroje naraz -->
-</footer>
-<script src="js/app.js"></script>
-
-</body>
-</html>
+<?php
+    include_once("partials/footer.php");
+?>
