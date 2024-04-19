@@ -1,11 +1,18 @@
+/* Work In Progress 
+    - optimalizácia 
+    - lepšia čitateľnosť
+    - rozdelenie na menšie časti
+    - zmena štýlu pre určitý obsah stránky
+*/
+
 body {
+    margin: 0px;
     font-family: "liberation sans", "arial";
     font-size: 20px;
     line-height: 1.5;
-    margin: 0px;
     min-height: 100%;
 }
-/*hlavny obsah stranky, do stredu*/
+/* hlavný obsah stránky - center */
 main {
     margin-left: auto;
     margin-right: auto;
@@ -13,28 +20,29 @@ main {
     margin-top: 100px;
     width: 80%;
 }
-/*päta, na spodku*/
+/* päta */
 footer {
-    text-align: center;
-    font-size: 16px;
-    background-color: #222;
-    color: #fff;
     padding: 20px;
     left:0;
     right: 0;
     bottom: 0;
+    font-size: 16px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
 }
 footer a {
-color: #fff;
+    color: #fff;
 }
 footer a:hover {
-color: #ddf;
+    color: #ddf;
 }
+/* tabuľka */
 table, th, td {
-    border: 1px solid #aaa;
-    border-collapse: collapse;
     padding: 5px;
     width: 50%;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
 }
 table {
     margin-left: auto;
@@ -49,23 +57,23 @@ table a:hover {
 .td_pravo {
     text-align:right;
 }
-/*navigacia*/
+/* navigácia */
 .navbar {
-    background-color: #222;
-    color: #fff;
+    position: fixed;
     display: flex;
     justify-content: center;
-    gap: 1%;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
     top: 0;
-}
-/*navigacia - link*/
-.navbar a {
+    width: 100%;
+    gap: 1%;
+    background-color: #222;
     color: #fff;
-    text-decoration: none;
+    z-index: 1;
+}
+/* navigácia - link */
+.navbar a {
     padding: 20px;
+    text-decoration: none;
+    color: #fff;
 }
 .navbar a:hover {
     background-color: #333;
@@ -73,17 +81,17 @@ table a:hover {
 .navbar img {
     width: 32px;
 }
-/*do stredu*/
+/* center */
 .cent {
     text-align: center;
 }
-/*dakujeme text*/
+/* text ďakujeme */
 .dakujeme {
-    text-align: center;
-    font-size: 96px;
     margin-top: 4.17em;
+    font-size: 96px;
+    text-align: center;
 }
-/*na hl. stranke, pre text*/
+/* text hl. stránky */
 .stlpec_lavy {
     display: flex;
     flex-direction: column;
@@ -100,24 +108,24 @@ table a:hover {
     font-size: 1.8rem;
     line-height: 1.5;
 }
-/*na hl. stranke, pre obrazok*/
+/* obrázok hl. stránky */
 .stlpec_pravy {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0rem 2rem;
 }
-/*styl pre linky v komunite*/
+/* štýl pre linky v komunite */
 .galeria {
     display: inline-flex;
-    border: 1px solid #aaa;
     margin: 5px;
     width: 200px;
+    border: 1px solid #aaa;
 }
 .galeria:hover {
     border: 1px solid #444;
 }
-/*div pre text linku*/
+/* div pre text linku */
 .galeria_text {
     display: flex;
     justify-content: center;
@@ -138,13 +146,13 @@ table a:hover {
     width: 350px;
 }
 #odoslat {
-    background-color: #222;
-    border: none;
-    color: #fff;
+    margin: 4px 2px;
     padding: 16px 32px;
     font-size: 16px;
+    border: none;
     text-decoration: none;
-    margin: 4px 2px;
+    background-color: #222;
+    color: #fff;
     cursor: pointer;
 }
 #email {
@@ -159,36 +167,36 @@ table a:hover {
 }
 /* dropdown button */
 .dropbtn {
-    background-color: #222;
-    color: #fff;
     padding: 16px;
     border: none;
+    background-color: #222;
+    color: #fff;
     cursor: pointer;
 }
-/*dropdown*/
+/* dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
 }
-/*dropdown obsah*/
+/* dropdown obsah */
 .dropdown-content {
-    display: none;
     position: absolute;
-    background-color: #222;
+    display: none;
     min-width: 100%;
+    background-color: #222;
     z-index: 1;
 }
-/*dropdown link*/
+/* dropdown link */
 .dropdown-content a {
-    color: #fff;
+    display: block;
     padding: 20px;
     text-decoration: none;
-    display: block;
+    color: #fff;
 }
 .dropdown-content a:hover {
     background-color: #333
 }
-/*ukázať obsah na hover*/
+/* ukázať obsah na hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -198,74 +206,74 @@ table a:hover {
 .menu {
     cursor: pointer;
 }
-/*akordion pre distra*/
+/* akordion pre distrá */
 .accordion {
-    background-color: #fafaff;
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    border: 1px solid #aaa;
-    text-align: left;
-    outline: none;
-    font-size: 32px;
-    font-weight: bold;
     padding: 24px 4px;
     margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border: 1px solid #aaa;
+    background-color: #fafaff;
+    outline: none;
+    cursor: pointer;
 }
-/*hover na accordion*/
+/* hover na accordion */
 .accordion:hover {
     background-color: #f0f0ff;
     border-color: #000;
 }
-/*otvoreny accordion*/
+/* otvoreny accordion */
 .active {
     background-color: #f0f0ff;
     border-color: #000;
 }
-/*panel*/
+/* panel */
 .panel {
-    padding: 12px;
     display: none;
-    background-color: #fff;
-    overflow: hidden;
-    border: 1px solid #000;
     margin-bottom: 10px;
+    padding: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #000;
 }
-/*slideshow kontajner*/
+/* slideshow kontajner */
 .slideshow-container {
-    max-width: 1000px;
     position: relative;
     margin: auto;
+    max-width: 1000px;
 }
-/*predchazajuci, dalsi btn*/
+/* predcházajuci, ďalší button */
 .prev, .next {
-    cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
     margin-top: -22px;
-    color: #ccc;
+    padding: 16px;
     font-weight: bold;
     font-size: 18px;
+    top: 50%;
+    width: auto;
+    color: #ccc;
     user-select: none;
+    cursor: pointer;
 }
-/*dat dalsi btn do prava*/
+/* premiestniť ďalší button vpravo */
 .next {
     right: 0;
 }
-/*zmenit farbu na hover*/
+/* zmeniť farbu na hover */
 .prev:hover, .next:hover {
     color: #000;
 }
-/*číslo obrázku*/
+/* číslo obrázku */
 .numbertext {
-    font-size: 10px;
     position: absolute;
+    font-size: 10px;
     bottom: 0;
     right: 0;
 }
-/*fade animácia*/
+/* fade animácia */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -275,7 +283,7 @@ table a:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
-/*mobil, iba zmeny velkostí + zobrazovanie/skrývanie*/
+/* mobilné zobrazenie, zmeny velkostí + zobrazovanie/skrývanie */
 @media (max-width: 767px) {
     .dropdown {
         display: inline-block;
@@ -287,7 +295,7 @@ table a:hover {
     nav a {
     display: none;
     }
-    /*na hl. stranke, aby boli text a obrazok pod sebou*/
+    /* text a obrázok hl. stránky pod sebou */
     .kontajner {
         grid-template-columns: 1fr;
     }
@@ -305,7 +313,7 @@ table a:hover {
         height: 100px;
         resize: none;
     }
-    /*skryt navbar obrazok*/
+    /* skryť obrázok navbaru */
     #tux_nav {
         display: none;
     }
@@ -316,21 +324,21 @@ table a:hover {
         width: 100%;
     }
 }
-/*PC*/
+/* PC */
 @media (min-width: 768px) {
-    /*skryt dropdown*/
+    /* skryť dropdown */
     .dropdown {
         display: none;
     }
     .distro_img {
         width: 50%;
     }
-    /*na hl. stranke, aby boli text a obrazok vedla seba*/
+    /* text a obrázok hl. stránky vedľa seba */
     .kontajner {
         display: grid;
         grid-template-columns: auto 1fr;
-        height: 95vh;
         padding: 3rem calc((100vw - 2000px) / 2);
+        height: 95vh;
     }
     #tux_nav_mobile {
         display: none;

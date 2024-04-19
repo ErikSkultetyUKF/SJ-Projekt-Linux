@@ -6,7 +6,7 @@
     <a href="https://gs.statcounter.com/os-market-share/" target="_blank">https://gs.statcounter.com/os-market-share/</a><br>
     <a href="https://www.atatus.com/blog/top-10-linux-distros/" target="_blank">https://www.atatus.com/blog/top-10-linux-distros/</a>
 </footer>
-<script src="js/app.js"></script>
+<script src="./assets/js/app.js"></script>
 
 </body>
 </html>
