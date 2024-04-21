@@ -3,14 +3,17 @@
 ?>
 
 <main>
+
     <h1 class="cent">Kontakt</h1>
     <p class="cent">Náš E-mail: info@projektlinux.org</p>
     <p class="cent">Náš telefón: +421 123 456 789</p>
     <p class="cent">Naša adresa: Tr. A. Hlinku 1, 949 01 Nitra</p>
 
-    <!-- formulár -->
+    <!-- Formulár -->
     <h2 class="cent">Napíšte nám:</h2>
-    <form class="cent" action="dakujeme.php">
+
+    <form class="cent" action="thankyou.php">
+
         <label for="email">E-mail:</label><br>
         <input type="email" id="email" name="email" placeholder="meno@priklad.org" value="" required><br>
     
@@ -21,6 +24,7 @@
         <label>Súhlasím so spracovaním osobných údajov</label><br><br>
         
         <input type="submit" id="odoslat" value="Odoslať">
+
     </form>
 </main>
 

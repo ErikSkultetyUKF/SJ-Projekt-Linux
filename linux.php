@@ -19,7 +19,7 @@
       $linuxInfo = $linuxInfoObject->select();
 
       for ($i = 0; $i < count($linuxInfo); $i++) {
-        echo '<button class="accordion">'.$linuxInfo[$i]->nadpis.'</button>';
+        echo '<button class="accordion">'.$linuxInfo[$i]->title.'</button>';
         echo '<div class="panel"">';
         echo '<p>'.$linuxInfo[$i]->text.'</p>';
         echo '</div>';
@@ -55,6 +55,7 @@
         </tr>
     </table>
     </div>
+  
 </main>
 
 <?php

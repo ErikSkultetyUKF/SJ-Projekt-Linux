@@ -1,5 +1,5 @@
 <?php
-    class Distribucia extends Database{
+    class ContentCreator extends Database{
 
     private $db;
 
@@ -10,10 +10,10 @@
     // Vybrať všetky informácie z db
     public function select(){
         try{
-            $sql = "SELECT * FROM distribucie";
+            $sql = "SELECT * FROM content_creators";
             $query = $this->db->query($sql);
-            $distribucie = $query->fetchAll();
-            return $distribucie;
+            $contentCreators = $query->fetchAll();
+            return $contentCreators;
 
         }catch(PDOException $e){
             echo($e->getMessage());

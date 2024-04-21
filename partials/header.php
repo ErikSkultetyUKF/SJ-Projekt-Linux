@@ -14,12 +14,13 @@
     <link rel="icon" href="./assets/img/misc/tux.svg">
     <title>Linux</title>
 </head>
-
 <body>
+
+<!-- Header -->
 <header>
     <nav class="navbar">
-        <!-- Logo (PC) -->
-        <img id="tux_nav" src="./assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
+        <!-- Logo PC -->
+        <img id="tux-nav" src="./assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
         <!-- Hamburger pre mobil -->
         <div class="dropdown">
             <button class="dropbtn">
@@ -28,18 +29,18 @@
             <div class="dropdown-content">
                 <a href="index.php">Domov</a>
                 <a href="linux.php">O Linuxe</a>
-                <a href="distribucie.php">Distribúcie</a>
-                <a href="komunita.php">Komunita</a>
-                <a href="kontakt.php">Kontakt</a>
-                <!-- Logo (mobil) -->
-                <img id="tux_nav_mobile" src="./assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
+                <a href="distributions.php">Distribúcie</a>
+                <a href="community.php">Komunita</a>
+                <a href="contact.php">Kontakt</a>
+                <!-- Logo Mobil -->
+                <img id="tux-nav-mobile" src="./assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
             </div>
         </div>
         <!-- Podstránky sa otvárajú v aktuálnej karte -->
         <a href="index.php">Domov</a>
         <a href="linux.php">O Linuxe</a>
-        <a href="distribucie.php">Distribúcie</a>
-        <a href="komunita.php">Komunita</a>
-        <a href="kontakt.php">Kontakt</a>
+        <a href="distributions.php">Distribúcie</a>
+        <a href="community.php">Komunita</a>
+        <a href="contact.php">Kontakt</a>
     </nav>
 </header>

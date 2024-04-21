@@ -14,14 +14,14 @@
     <h1>Populárne distribúcie Linuxu</h1>
 
     <?php
-        $distribuciaObject = new Distribucia();
-        $distribucia = $distribuciaObject->select();
+        $distributionObject = new Distribution();
+        $distribution = $distributionObject->select();
 
-        for ($i = 0; $i < count($distribucia); $i++) {
-            echo '<button class="accordion">'.$distribucia[$i]->nazov.'</button>';
+        for ($i = 0; $i < count($distribution); $i++) {
+            echo '<button class="accordion">'.$distribution[$i]->name.'</button>';
             echo '<div class="panel"">';
-            echo '<p>'.$distribucia[$i]->popis.'</p>';
-            echo '<img class="distro_img" src="'.$distribucia[$i]->obrazok.'" alt="'.$distribucia[$i]->popis_obrazku.'">';
+            echo '<p>'.$distribution[$i]->description.'</p>';
+            echo '<img class="distro-img" src="'.$distribution[$i]->image.'" alt="'.$distribution[$i]->image_description.'">';
             echo '</div>';
         }
     ?>

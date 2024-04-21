@@ -12,7 +12,7 @@ body {
     line-height: 1.5;
     min-height: 100%;
 }
-/* hlavný obsah stránky - center */
+/* hl. obsah stránky - center */
 main {
     margin-left: auto;
     margin-right: auto;
@@ -20,7 +20,7 @@ main {
     margin-top: 100px;
     width: 80%;
 }
-/* päta */
+/* Footer */
 footer {
     padding: 20px;
     left:0;
@@ -92,24 +92,24 @@ table a:hover {
     text-align: center;
 }
 /* text hl. stránky */
-.stlpec_lavy {
+.stlpec-lavy {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0rem 1rem;
 }
-.stlpec_lavy h1 {
+.stlpec-lavy h1 {
     margin-top: 15%;
     margin-bottom: 0rem;
     font-size: 3rem;
 }
-.stlpec_lavy p {
+.stlpec-lavy p {
     width: 70%;
     font-size: 1.8rem;
     line-height: 1.5;
 }
 /* obrázok hl. stránky */
-.stlpec_pravy {
+.stlpec-pravy {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +126,7 @@ table a:hover {
     border: 1px solid #444;
 }
 /* div pre text linku */
-.galeria_text {
+.galeria-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,10 +214,8 @@ table a:hover {
     font-weight: bold;
     width: 100%;
     text-align: left;
-    border: none;
     border: 1px solid #aaa;
     background-color: #fafaff;
-    outline: none;
     cursor: pointer;
 }
 /* hover na accordion */
@@ -267,7 +265,7 @@ table a:hover {
     color: #000;
 }
 /* číslo obrázku */
-.numbertext {
+.number-text {
     position: absolute;
     font-size: 10px;
     bottom: 0;
@@ -299,10 +297,10 @@ table a:hover {
     .kontajner {
         grid-template-columns: 1fr;
     }
-    .stlpec_lavy p {
+    .stlpec-lavy p {
         width: 100%;
     }
-    .distro_img {
+    .distro-img {
         width: 100%;
     }
     #email {
@@ -314,7 +312,7 @@ table a:hover {
         resize: none;
     }
     /* skryť obrázok navbaru */
-    #tux_nav {
+    #tux-nav {
         display: none;
     }
     .galeria {
@@ -330,7 +328,7 @@ table a:hover {
     .dropdown {
         display: none;
     }
-    .distro_img {
+    .distro-img {
         width: 50%;
     }
     /* text a obrázok hl. stránky vedľa seba */
@@ -340,7 +338,7 @@ table a:hover {
         padding: 3rem calc((100vw - 2000px) / 2);
         height: 95vh;
     }
-    #tux_nav_mobile {
+    #tux-nav-mobile {
         display: none;
     }
 }
