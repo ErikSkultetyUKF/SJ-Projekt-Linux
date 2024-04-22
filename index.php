@@ -4,26 +4,26 @@
 
 <main>
 
-    <div class="kontajner">
+    <div class="container">
 
-        <!-- text -->
-        <div class="stlpec-lavy">
+        <!-- Text -->
+        <div class="column-left">
             <h1>Linux</h1>
             <p>Výkonný operačný systém s otvoreným zdrojovým kódom založený na Unixe a schopný bežať na rôznom hardvéri s vysokými prevádzkovými nárokmi.</p>
         </div>
 
-        <!-- obrázok -->
-        <div class="stlpec-pravy">
+        <!-- Obrázok -->
+        <div class="column-right">
             <div class="slideshow-container">
 
-                <div class="mySlides fade">
-                  <div class="number-text">1 / 2</div>
-                  <img class="tux" src="./assets/img/misc/tux.svg" alt="maskot-linuxu">
+                <div class="slideshow-img fade">
+                  <div class="img-num">1 / 2</div>
+                  <img class="img-350" src="./assets/img/misc/tux.svg" alt="maskot-linuxu">
                 </div>
 
-                <div class="mySlides fade">
-                    <div class="number-text">2 / 2</div>
-                    <img class="tux" src="./assets/img/misc/tux2.png"  alt="maskot-linuxu-neoficialne">
+                <div class="slideshow-img fade">
+                    <div class="img-num">2 / 2</div>
+                    <img class="img-350" src="./assets/img/misc/tux2.png" alt="maskot-linuxu-neoficialne">
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>

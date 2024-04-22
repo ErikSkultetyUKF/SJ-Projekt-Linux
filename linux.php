@@ -20,7 +20,7 @@
 
       for ($i = 0; $i < count($linuxInfo); $i++) {
         echo '<button class="accordion">'.$linuxInfo[$i]->title.'</button>';
-        echo '<div class="panel"">';
+        echo '<div class="accordion-content"">';
         echo '<p>'.$linuxInfo[$i]->text.'</p>';
         echo '</div>';
     }
@@ -28,7 +28,7 @@
 
     <!-- Tabuľka - Podiel na trhu -->
     <button class="accordion">Podiel na trhu</button>
-    <div class="panel">
+    <div class="accordion-content">
     <table>
         <tr><th colspan=2>Podiel na trhu - všetky platformy</th>
         </tr>
@@ -36,22 +36,22 @@
           <th>Podiel</th>
         </tr>
         <tr><td>Android</td>
-          <td class="td_pravo">38.27%</td>
+          <td class="right">38.27%</td>
         </tr>
         <tr><td>Windows</td>
-          <td class="td_pravo">30.60%</td>
+          <td class="right">30.60%</td>
         </tr>
         <tr><td>iOS</td>
-          <td class="td_pravo">16.54%</td>
+          <td class="right">16.54%</td>
         </tr>
         <tr><td>OS X</td>
-          <td class="td_pravo">9.40%</td>
+          <td class="right">9.40%</td>
         </tr>
         <tr><td>Chrome OS</td>
-          <td class="td_pravo">1.66%</td>
+          <td class="right">1.66%</td>
         </tr>
         <tr><td>Linux</td>
-          <td class="td_pravo">1.44%</td>
+          <td class="right">1.44%</td>
         </tr>
     </table>
     </div>

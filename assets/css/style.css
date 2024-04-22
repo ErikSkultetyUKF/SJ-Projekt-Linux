@@ -1,14 +1,14 @@
 /* Work In Progress 
     - optimalizácia 
     - lepšia čitateľnosť
-    - rozdelenie na menšie časti
+    - rozdelenie na menšie časti (takmer hotovo)
     - zmena štýlu pre určitý obsah stránky
 */
 
 body {
     margin: 0px;
     font-family: "liberation sans", "arial";
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5;
     min-height: 100%;
 }
@@ -22,42 +22,39 @@ main {
 }
 /* Footer */
 footer {
-    padding: 20px;
+    padding: 1.25rem;
     left:0;
     right: 0;
     bottom: 0;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     background-color: #222;
     color: #fff;
 }
 footer a {
     color: #fff;
+    text-decoration: none;
 }
-footer a:hover {
-    color: #ddf;
+/* Right */
+.right {
+    text-align: right;
 }
-/* tabuľka */
+/* Center */
+.cent {
+    text-align: center;
+}
+/* Table */
 table, th, td {
-    padding: 5px;
+    padding: 0.25rem;
     width: 50%;
-    border: 1px solid #aaa;
+    border: 1px solid #bbb;
     border-collapse: collapse;
 }
 table {
     margin-left: auto;
     margin-right: auto;
 }
-table a {
-    color: #000;
-}
-table a:hover {
-    color: #777;
-}
-.td_pravo {
-    text-align:right;
-}
-/* navigácia */
+/* Navbar */
 .navbar {
     position: fixed;
     display: flex;
@@ -69,9 +66,9 @@ table a:hover {
     color: #fff;
     z-index: 1;
 }
-/* navigácia - link */
+/* Navbar - link */
 .navbar a {
-    padding: 20px;
+    padding: 1.25rem;
     text-decoration: none;
     color: #fff;
 }
@@ -81,264 +78,36 @@ table a:hover {
 .navbar img {
     width: 32px;
 }
-/* center */
-.cent {
-    text-align: center;
-}
-/* text ďakujeme */
-.dakujeme {
+/* Text ďakujeme */
+.thankyou {
     margin-top: 4.17em;
-    font-size: 96px;
+    font-size: 6rem;
     text-align: center;
 }
-/* text hl. stránky */
-.stlpec-lavy {
+/* Text hl. stránky */
+.column-left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0rem 1rem;
 }
-.stlpec-lavy h1 {
+.column-left h1 {
     margin-top: 15%;
     margin-bottom: 0rem;
     font-size: 3rem;
 }
-.stlpec-lavy p {
+.column-left p {
     width: 70%;
     font-size: 1.8rem;
     line-height: 1.5;
 }
-/* obrázok hl. stránky */
-.stlpec-pravy {
+/* Obrázok hl. stránky */
+.column-right {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0rem 2rem;
 }
-/* štýl pre linky v komunite */
-.galeria {
-    display: inline-flex;
-    margin: 5px;
-    width: 200px;
-    border: 1px solid #aaa;
-}
-.galeria:hover {
-    border: 1px solid #444;
-}
-/* div pre text linku */
-.galeria-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    height: 100px;
-}
-.galeria img {
-    width: 100%;
-    height: auto;
-}
-.galeria a {
-    color: #000;
-    text-decoration: none;
-}
-.tux {
+.img-350 {
     width: 350px;
-}
-#odoslat {
-    margin: 4px 2px;
-    padding: 16px 32px;
-    font-size: 16px;
-    border: none;
-    text-decoration: none;
-    background-color: #222;
-    color: #fff;
-    cursor: pointer;
-}
-#email {
-    width: 30%;
-    font-size: 16px;
-}
-#poznamka {
-    width: 30%;
-    height: 100px;
-    font-size: 16px;
-    resize: none;
-}
-/* dropdown button */
-.dropbtn {
-    padding: 16px;
-    border: none;
-    background-color: #222;
-    color: #fff;
-    cursor: pointer;
-}
-/* dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-/* dropdown obsah */
-.dropdown-content {
-    position: absolute;
-    display: none;
-    min-width: 100%;
-    background-color: #222;
-    z-index: 1;
-}
-/* dropdown link */
-.dropdown-content a {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    color: #fff;
-}
-.dropdown-content a:hover {
-    background-color: #333
-}
-/* ukázať obsah na hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropdown:hover .dropbtn {
-    background-color: #333;
-}
-.menu {
-    cursor: pointer;
-}
-/* akordion pre distrá */
-.accordion {
-    padding: 24px 4px;
-    margin-bottom: 10px;
-    font-size: 32px;
-    font-weight: bold;
-    width: 100%;
-    text-align: left;
-    border: 1px solid #aaa;
-    background-color: #fafaff;
-    cursor: pointer;
-}
-/* hover na accordion */
-.accordion:hover {
-    background-color: #f0f0ff;
-    border-color: #000;
-}
-/* otvoreny accordion */
-.active {
-    background-color: #f0f0ff;
-    border-color: #000;
-}
-/* panel */
-.panel {
-    display: none;
-    margin-bottom: 10px;
-    padding: 12px;
-    overflow: hidden;
-    background-color: #fff;
-    border: 1px solid #000;
-}
-/* slideshow kontajner */
-.slideshow-container {
-    position: relative;
-    margin: auto;
-    max-width: 1000px;
-}
-/* predcházajuci, ďalší button */
-.prev, .next {
-    position: absolute;
-    margin-top: -22px;
-    padding: 16px;
-    font-weight: bold;
-    font-size: 18px;
-    top: 50%;
-    width: auto;
-    color: #ccc;
-    user-select: none;
-    cursor: pointer;
-}
-/* premiestniť ďalší button vpravo */
-.next {
-    right: 0;
-}
-/* zmeniť farbu na hover */
-.prev:hover, .next:hover {
-    color: #000;
-}
-/* číslo obrázku */
-.number-text {
-    position: absolute;
-    font-size: 10px;
-    bottom: 0;
-    right: 0;
-}
-/* fade animácia */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-/* mobilné zobrazenie, zmeny velkostí + zobrazovanie/skrývanie */
-@media (max-width: 767px) {
-    .dropdown {
-        display: inline-block;
-    }
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav a {
-    display: none;
-    }
-    /* text a obrázok hl. stránky pod sebou */
-    .kontajner {
-        grid-template-columns: 1fr;
-    }
-    .stlpec-lavy p {
-        width: 100%;
-    }
-    .distro-img {
-        width: 100%;
-    }
-    #email {
-        width: 100%;
-    }
-    #poznamka {
-        width: 100%;
-        height: 100px;
-        resize: none;
-    }
-    /* skryť obrázok navbaru */
-    #tux-nav {
-        display: none;
-    }
-    .galeria {
-        width: 100%;
-    }
-    table {
-        width: 100%;
-    }
-}
-/* PC */
-@media (min-width: 768px) {
-    /* skryť dropdown */
-    .dropdown {
-        display: none;
-    }
-    .distro-img {
-        width: 50%;
-    }
-    /* text a obrázok hl. stránky vedľa seba */
-    .kontajner {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        padding: 3rem calc((100vw - 2000px) / 2);
-        height: 95vh;
-    }
-    #tux-nav-mobile {
-        display: none;
-    }
 }

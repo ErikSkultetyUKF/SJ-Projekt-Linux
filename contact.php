@@ -15,15 +15,15 @@
     <form class="cent" action="thankyou.php">
 
         <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" placeholder="meno@priklad.org" value="" required><br>
+        <input type="email" class="email" name="email" placeholder="meno@priklad.org" value="" required><br>
     
-        <label for="poznamka">Poznámka:</label><br>
-        <textarea id="poznamka" name="poznamka" maxlength="150"></textarea><br><br>
+        <label for="note">Poznámka:</label><br>
+        <textarea class="note" name="note" maxlength="180" required></textarea><br><br>
     
         <input type="checkbox" required>
         <label>Súhlasím so spracovaním osobných údajov</label><br><br>
         
-        <input type="submit" id="odoslat" value="Odoslať">
+        <input type="submit" class="submit" value="Odoslať">
 
     </form>
 </main>

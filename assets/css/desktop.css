@@ -1,0 +1,20 @@
+/* Desktopové zobrazenie, zmeny velkostí + zobrazovanie/skrývanie */
+@media (min-width: 768px) {
+    /* Skryť dropdown */
+    .dropdown {
+        display: none;
+    }
+    .distro-img {
+        width: 50%;
+    }
+    /* Text a obrázok hl. stránky vedľa seba */
+    .container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding: 3rem calc((100vw - 2000px) / 2);
+        height: 95vh;
+    }
+    .tux-nav-mobile {
+        display: none;
+    }
+}

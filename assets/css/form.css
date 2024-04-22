@@ -1,0 +1,21 @@
+/* Form */
+.submit {
+    margin: 0.25rem 0.125rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    text-decoration: none;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+}
+.email {
+    width: 30%;
+    font-size: 1rem;
+}
+.note {
+    width: 30%;
+    height: 100px;
+    font-size: 1rem;
+    resize: none;
+}

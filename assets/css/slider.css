@@ -1,0 +1,44 @@
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+}
+/* Button pre predcházajúci a ďalší obrázok */
+.prev, .next {
+    position: absolute;
+    margin-top: -22px;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 18px;
+    top: 50%;
+    width: auto;
+    color: #ccc;
+    user-select: none;
+    cursor: pointer;
+}
+/* Premiestniť button pre ďalší obrázok vpravo */
+.next {
+    right: 0;
+}
+/* Zmeniť farbu na hover */
+.prev:hover, .next:hover {
+    color: #000;
+}
+/* Číslo obrázku */
+.img-num {
+    position: absolute;
+    font-size: 10px;
+    bottom: 0;
+    right: 0;
+}
+/* Fade animácia */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

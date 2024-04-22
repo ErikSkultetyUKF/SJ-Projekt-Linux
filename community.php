@@ -12,10 +12,10 @@
         $contentCreator = $contentCreatorObject->select();
 
         for ($i = 0; $i < count($contentCreator); $i++) {
-            echo('<div class="galeria">');
+            echo('<div class="gallery">');
             echo('<a href="'.$contentCreator[$i]->link.'" target="_blank">');
             echo('<img src="'.$contentCreator[$i]->image.'" alt="'.$contentCreator[$i]->image_description.'">');
-            echo('<div class="galeria-text">'.$contentCreator[$i]->name.'</div></a>');
+            echo('<div class="gallery-text">'.$contentCreator[$i]->name.'</div></a>');
             echo('</div>');
         }
     ?>
@@ -28,10 +28,10 @@
         $popularWebstranka = $popularWebstrankaObject->select();
 
         for ($i = 0; $i < count($popularWebstranka); $i++) {
-            echo('<div class="galeria">');
+            echo('<div class="gallery">');
             echo('<a href="'.$popularWebstranka[$i]->link.'" target="_blank">');
             echo('<img src="'.$popularWebstranka[$i]->image.'" alt="'.$popularWebstranka[$i]->image_description.'">');
-            echo('<div class="galeria-text">'.$popularWebstranka[$i]->name.'</div></a>');
+            echo('<div class="gallery-text">'.$popularWebstranka[$i]->name.'</div></a>');
             echo('</div>');
         }
     ?>

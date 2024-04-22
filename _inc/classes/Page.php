@@ -9,6 +9,30 @@ class Page {
         $this->pageName = $pageName;
     }
 
+    function addStylesheets(){
+        echo('<link rel="stylesheet" href="./assets/css/style.css">');
+        echo('<link rel="stylesheet" href="./assets/css/dropdown.css">');
+        echo('<link rel="stylesheet" href="./assets/css/desktop.css">');
+        echo('<link rel="stylesheet" href="./assets/css/mobile.css">');
+        switch($this->pageName){
+        case 'index':
+            echo('<link rel="stylesheet" href="./assets/css/slider.css">');
+            break;
+        case 'linux':
+            echo('<link rel="stylesheet" href="./assets/css/accordion.css">');
+            break; 
+        case 'distributions':
+            echo('<link rel="stylesheet" href="./assets/css/accordion.css">');
+            break; 
+        case 'community':
+            echo('<link rel="stylesheet" href="./assets/css/gallery.css">');
+            break; 
+        case 'contact':
+            echo('<link rel="stylesheet" href="./assets/css/form.css">');
+            break;  
+        } 
+    }
+
     function addScripts(){
         switch($this->pageName){
         case 'index':
@@ -22,6 +46,5 @@ class Page {
             break;  
         } 
     }
-
 }
 ?>

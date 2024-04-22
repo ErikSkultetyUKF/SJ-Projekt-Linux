@@ -1,0 +1,41 @@
+/* Dropdown button */
+.dropdown-button {
+    padding: 1rem;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+}
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown obsah */
+.dropdown-content {
+    position: absolute;
+    display: none;
+    min-width: 100%;
+    background-color: #222;
+    z-index: 1;
+}
+/* Dropdown link */
+.dropdown-content a {
+    display: block;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: #fff;
+}
+.dropdown-content a:hover {
+    background-color: #333
+}
+/* Ukázať obsah na hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #333;
+}
+.menu {
+    cursor: pointer;
+}

@@ -19,7 +19,7 @@
 
         for ($i = 0; $i < count($distribution); $i++) {
             echo '<button class="accordion">'.$distribution[$i]->name.'</button>';
-            echo '<div class="panel"">';
+            echo '<div class="accordion-content"">';
             echo '<p>'.$distribution[$i]->description.'</p>';
             echo '<img class="distro-img" src="'.$distribution[$i]->image.'" alt="'.$distribution[$i]->image_description.'">';
             echo '</div>';
