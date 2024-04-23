@@ -1,6 +1,6 @@
 <?php
 
-    class PopularWebpage extends Database{
+    class MarketShare extends Database{
 
         private $db;
 
@@ -11,10 +11,10 @@
         // Vybrať všetky informácie z db
         public function select(){
             try{
-                $sql = "SELECT * FROM popular_webpages";
+                $sql = "SELECT * FROM market_share";
                 $query = $this->db->query($sql);
-                $popularWebpages = $query->fetchAll();
-                return $popularWebpages;
+                $marketShare = $query->fetchAll();
+                return $marketShare;
 
             }catch(PDOException $e){
                 echo($e->getMessage());

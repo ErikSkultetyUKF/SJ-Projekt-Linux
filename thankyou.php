@@ -4,6 +4,10 @@
 
 <main>
     <h1 class="thankyou">Ďakujeme</h1><br><br><br><br><br>
+    <?php
+        $contactObject = new Contact();
+        $contactObject->insert();
+    ?>
 </main>
 
 <?php

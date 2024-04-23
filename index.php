@@ -18,12 +18,12 @@
 
                 <div class="slideshow-img fade">
                   <div class="img-num">1 / 2</div>
-                  <img class="img-350" src="./assets/img/misc/tux.svg" alt="maskot-linuxu">
+                  <img class="img-350" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.svg" alt="maskot-linuxu">
                 </div>
 
                 <div class="slideshow-img fade">
                     <div class="img-num">2 / 2</div>
-                    <img class="img-350" src="./assets/img/misc/tux2.png" alt="maskot-linuxu-neoficialne">
+                    <img class="img-350" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux2.png" alt="maskot-linuxu-neoficialne">
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>

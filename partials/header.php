@@ -28,12 +28,14 @@
 <header>
     <nav class="navbar">
         <!-- Logo PC -->
-        <img class="tux-nav" src="./assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
+        <img class="tux-nav" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
+
         <!-- Hamburger pre mobil -->
         <div class="dropdown">
             <button class="dropdown-button">
                 <img src="./assets/img/misc/menu.png" alt="ikona-hamburger-menu">
             </button>
+
             <div class="dropdown-content">
                 <!-- Podstránky sa otvárajú v aktuálnej karte -->
                 <a href="index.php">Domov</a>
@@ -41,8 +43,9 @@
                 <a href="distributions.php">Distribúcie</a>
                 <a href="community.php">Komunita</a>
                 <a href="contact.php">Kontakt</a>
+
                 <!-- Logo Mobil -->
-                <img class="tux-nav-mobile" src="./assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
+                <img class="tux-nav-mobile" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.svg" alt="ikona-maskot-linuxu">
             </div>
         </div>
         <!-- Podstránky sa otvárajú v aktuálnej karte -->
