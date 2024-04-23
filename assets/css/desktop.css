@@ -17,4 +17,10 @@
     .tux-nav-mobile {
         display: none;
     }
+    .email {
+        width: 33%;
+    }
+    .message {
+        width: 33%;
+    }
 }

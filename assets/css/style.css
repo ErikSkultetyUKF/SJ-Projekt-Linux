@@ -4,13 +4,15 @@
     - rozdelenie na menšie časti (takmer hotovo)
     - zmena štýlu pre určitý obsah stránky
 */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
 body {
     margin: 0px;
     font-family: "liberation sans", "arial";
     font-size: 1.25rem;
     line-height: 1.5;
-    min-height: 100%;
 }
 /* hl. obsah stránky - center */
 main {
@@ -22,10 +24,14 @@ main {
 }
 /* Footer */
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1.25rem;
     left:0;
     right: 0;
     bottom: 0;
+    gap: 2%;
     font-size: 1rem;
     text-align: center;
     background-color: #222;
@@ -81,6 +87,7 @@ table {
 /* Text ďakujeme */
 .thankyou {
     margin-top: 4.17em;
+    margin-bottom: 1em;
     font-size: 6rem;
     text-align: center;
 }

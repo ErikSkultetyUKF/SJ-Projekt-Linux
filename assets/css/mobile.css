@@ -23,10 +23,8 @@
     .email {
         width: 100%;
     }
-    .note {
+    .message {
         width: 100%;
-        height: 100px;
-        resize: none;
     }
     /* Skryť obrázok navbaru */
     .tux-nav {
