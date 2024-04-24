@@ -1,14 +1,18 @@
 /* Mobilné zobrazenie, zmeny velkostí + zobrazovanie/skrývanie */
 @media (max-width: 767px) {
-    .dropdown {
-        display: inline-block;
-    }
     nav {
         flex-direction: column;
         text-align: center;
     }
     nav a {
-    display: none;
+        display: none;
+    }
+    .dropdown {
+        display: inline-block;
+    }
+    /* Skryť obrázok navbaru */
+    .tux-nav {
+        display: none;
     }
     /* Text a obrázok hl. stránky pod sebou */
     .container {
@@ -25,10 +29,6 @@
     }
     .message {
         width: 100%;
-    }
-    /* Skryť obrázok navbaru */
-    .tux-nav {
-        display: none;
     }
     .gallery {
         width: 100%;

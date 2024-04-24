@@ -1,6 +1,6 @@
-/* Work In Progress 
+/* To Do
     - optimalizácia 
-    - lepšia čitateľnosť
+    - lepšia čitateľnosť (takmer hotovo)
     - rozdelenie na menšie časti (takmer hotovo)
     - zmena štýlu pre určitý obsah stránky
 */
@@ -31,7 +31,7 @@ footer {
     left:0;
     right: 0;
     bottom: 0;
-    gap: 2%;
+    gap: 5rem;
     font-size: 1rem;
     text-align: center;
     background-color: #222;
@@ -65,9 +65,10 @@ table {
     position: fixed;
     display: flex;
     justify-content: center;
+    align-items: center;
     top: 0;
     width: 100%;
-    gap: 1%;
+    gap: 0.5rem;
     background-color: #222;
     color: #fff;
     z-index: 1;

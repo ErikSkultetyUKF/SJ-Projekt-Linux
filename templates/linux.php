@@ -19,7 +19,7 @@
         $linuxInfo = $linuxInfoObject->select();
 
         for ($i = 0; $i < count($linuxInfo); $i++) {
-          echo '<button class="accordion">'.$linuxInfo[$i]->title.'</button>';
+          echo '<div class="accordion">'.$linuxInfo[$i]->title.'</div>';
           echo '<div class="accordion-content"">';
           echo '<p>'.$linuxInfo[$i]->text.'</p>';
           echo '</div>';
@@ -27,7 +27,7 @@
     ?>
 
     <!-- Tabuľka - Podiel na trhu -->
-    <button class="accordion">Podiel na trhu</button>
+    <div class="accordion">Podiel na trhu</div>
     <div class="accordion-content">
         <table>
             <tr>

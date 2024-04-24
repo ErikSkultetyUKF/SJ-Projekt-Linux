@@ -18,7 +18,7 @@
         $distribution = $distributionObject->select();
 
         for ($i = 0; $i < count($distribution); $i++) {
-            echo '<button class="accordion">'.$distribution[$i]->name.'</button>';
+            echo '<div class="accordion">'.$distribution[$i]->name.'</div>';
             echo '<div class="accordion-content"">';
             echo '<p>'.$distribution[$i]->description.'</p>';
             echo '<img class="distro-img" src="'.$distribution[$i]->image.'" alt="'.$distribution[$i]->image_description.'">';

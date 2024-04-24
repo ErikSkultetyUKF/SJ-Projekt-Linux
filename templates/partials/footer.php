@@ -1,6 +1,5 @@
 <!-- Footer -->
-<!-- Inline štýl, footer ignoruje css-->
-<footer style="text-align: center; font-size: 1rem;">
+<footer>
     <div>
         <h2>Kontaktujte nás</h2>
         <p>info@projektlinux.org<br>
@@ -8,6 +7,7 @@
         Tr. A. Hlinku 1, 949 01 Nitra</p>
     </div>
     <div>
+        <!-- Použité zdroje -->
         <h2>Použité zdroje:</h2>
         <a href="https://www.linux.com/what-is-linux/" target="_blank">https://www.linux.com/what-is-linux/</a><br>
         <a href="https://gs.statcounter.com/os-market-share/" target="_blank">https://gs.statcounter.com/os-market-share/</a><br>

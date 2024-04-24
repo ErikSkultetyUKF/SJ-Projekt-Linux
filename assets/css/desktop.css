@@ -4,8 +4,8 @@
     .dropdown {
         display: none;
     }
-    .distro-img {
-        width: 50%;
+    .tux-nav-mobile {
+        display: none;
     }
     /* Text a obrázok hl. stránky vedľa seba */
     .container {
@@ -14,8 +14,8 @@
         padding: 3rem calc((100vw - 2000px) / 2);
         height: 95vh;
     }
-    .tux-nav-mobile {
-        display: none;
+    .distro-img {
+        width: 50%;
     }
     .email {
         width: 33%;
