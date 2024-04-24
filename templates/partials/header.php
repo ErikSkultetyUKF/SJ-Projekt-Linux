@@ -38,7 +38,7 @@
 
             <div class="dropdown-content">
                 <!-- Podstránky sa otvárajú v aktuálnej karte -->
-                <a href="index.php">Domov</a>
+                <a href="home.php">Domov</a>
                 <a href="linux.php">O Linuxe</a>
                 <a href="distributions.php">Distribúcie</a>
                 <a href="community.php">Komunita</a>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <!-- Podstránky sa otvárajú v aktuálnej karte -->
-        <a href="index.php">Domov</a>
+        <a href="home.php">Domov</a>
         <a href="linux.php">O Linuxe</a>
         <a href="distributions.php">Distribúcie</a>
         <a href="community.php">Komunita</a>
