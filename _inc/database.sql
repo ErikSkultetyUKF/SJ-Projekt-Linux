@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 23, 2024 at 11:03 PM
+-- Generation Time: Apr 24, 2024 at 10:31 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -149,11 +149,11 @@ CREATE TABLE `popular_webpages` (
 --
 
 INSERT INTO `popular_webpages` (`id`, `name`, `link`, `image`, `image_description`) VALUES
-(1, 'It\'s FOSS', 'https://itsfoss.com/', './assets/img/community/webpages/itsfoss.png', 'its-foss-logo'),
-(2, '9to5linux', 'https://9to5linux.com/', './assets/img/community/webpages/9to5linux.png', '9to5linux-logo'),
-(3, 'OMG! Ubuntu', 'https://omgubuntu.co.uk/', './assets/img/community/webpages/omg-ubuntu.png', 'omg-ubuntu-logo'),
-(4, 'Ask Ubuntu', 'https://askubuntu.com/', './assets/img/community/webpages/ask-ubuntu.png', 'ask-ubuntu-logo'),
-(5, 'nixCraft', 'https://nixcraft.com/', './assets/img/community/webpages/nixcraft.png', 'nixcraft-logo');
+(1, 'It\'s FOSS', 'https://itsfoss.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/itsfoss.png', 'its-foss-logo'),
+(2, '9to5linux', 'https://9to5linux.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/9to5linux.png', '9to5linux-logo'),
+(3, 'OMG! Ubuntu', 'https://omgubuntu.co.uk/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/omg-ubuntu.png', 'omg-ubuntu-logo'),
+(4, 'Ask Ubuntu', 'https://askubuntu.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/ask-ubuntu.png', 'ask-ubuntu-logo'),
+(5, 'nixCraft', 'https://nixcraft.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/nixcraft.png', 'nixcraft-logo');
 
 --
 -- Indexes for dumped tables
