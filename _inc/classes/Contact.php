@@ -4,19 +4,18 @@
 
         private $db;
 
-        public function __construct()
-        {
-            $this->db = $this->db_connection();
+        public function __construct() {
+            $this->db = $this->dbConnection();
         }
         
         public function select() {
-            try{
+            try {
                 $sql = "SELECT * FROM contact";
                 $query = $this->db->query($sql);
                 $contact = $query->fetchAll();
                 return $contact;
     
-            }catch(PDOException $e){
+            } catch (PDOException $e){
                 echo($e->getMessage());
             }   
         }
@@ -35,13 +34,12 @@
                     try {
                       $query = "INSERT INTO contact (name, email, message, accept_status) 
                       VALUES (:contactName, :contactEmail, :contactMessage, :contactAcceptStatus)";
-                      $query_run = $this->db->prepare($query);
-                      $query_run->execute($data);    
+                      $queryRun = $this->db->prepare($query);
+                      $queryRun->execute($data);    
 
-                    }catch(PDOException $e) {
+                    } catch (PDOException $e) {
                       echo $e->getMessage();
                     }
-
 
                 } else {
                     echo 'Formulár nebol odoslaný';
@@ -51,5 +49,4 @@
               }
         }
     }
-
 ?>

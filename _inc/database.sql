@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2024 at 10:31 AM
+-- Generation Time: Apr 25, 2024 at 11:11 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -116,7 +116,7 @@ CREATE TABLE `market_share` (
   `id` int(11) NOT NULL,
   `operating_system` text NOT NULL,
   `share` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
 -- Dumping data for table `market_share`
@@ -154,6 +154,25 @@ INSERT INTO `popular_webpages` (`id`, `name`, `link`, `image`, `image_descriptio
 (3, 'OMG! Ubuntu', 'https://omgubuntu.co.uk/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/omg-ubuntu.png', 'omg-ubuntu-logo'),
 (4, 'Ask Ubuntu', 'https://askubuntu.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/ask-ubuntu.png', 'ask-ubuntu-logo'),
 (5, 'nixCraft', 'https://nixcraft.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/nixcraft.png', 'nixcraft-logo');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`) VALUES
+(1, 'admin@admin.sk', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -196,6 +215,12 @@ ALTER TABLE `popular_webpages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -203,7 +228,7 @@ ALTER TABLE `popular_webpages`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `content_creators`
@@ -234,6 +259,12 @@ ALTER TABLE `market_share`
 --
 ALTER TABLE `popular_webpages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,16 +1,16 @@
 <?php
 
-    class Database{
+    class Database {
 
         private $host = 'localhost';
-        private $db_name = 'Skultety-SJ-Projekt-Linux';
-        private $user_name = 'root';
+        private $dbName = 'Skultety-SJ-Projekt-Linux';
+        private $userName = 'root';
         private $password = '';
 
-        protected function db_connection(){
+        protected function dbConnection() {
             try {
-                $connection = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name . ";charset=utf8", 
-                                      $this->user_name, 
+                $connection = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbName . ";charset=utf8", 
+                                      $this->userName, 
                                       $this->password);
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
                 $connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
@@ -20,7 +20,5 @@
                 die("Chyba pripojenia k databáze: " . $e->getMessage());
             }
         }
-
     }
-
 ?>

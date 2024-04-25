@@ -1,22 +1,22 @@
 <?php
 
-    class LinuxInfo extends Database{
+    class LinuxInfo extends Database {
 
         private $db;
 
-        public function __construct(){
-            $this->db = $this->db_connection();
+        public function __construct() {
+            $this->db = $this->dbConnection();
         }
 
         // Vybrať všetky informácie z db
-        public function select(){
-            try{
+        public function select() {
+            try {
                 $sql = "SELECT * FROM linux_info";
                 $query = $this->db->query($sql);
                 $linuxInfo = $query->fetchAll();
                 return $linuxInfo;
 
-            }catch(PDOException $e){
+            } catch(PDOException $e) {
                 echo($e->getMessage());
             }   
         }

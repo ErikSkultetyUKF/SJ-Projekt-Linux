@@ -12,7 +12,7 @@
 .submit:hover {
     background-color: #444;
 }
-.email {
+.entry {
     height: 1.5rem;
     font-size: 1rem;
 }
@@ -20,4 +20,9 @@
     height: 10rem;
     font-size: 1rem;
     resize: none;
+}
+.loginbox {
+    margin-left: 25%;
+    width: 50%; 
+    border: 1px solid #bbb; 
 }

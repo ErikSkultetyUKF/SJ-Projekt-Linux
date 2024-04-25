@@ -4,17 +4,16 @@
 
         private $pageName;
 
-        public function __construct($pageName)
-        {
+        public function __construct($pageName) {
             $this->pageName = $pageName;
         }
 
-        function addStylesheets(){
+        function addStylesheets() {
             echo('<link rel="stylesheet" href="../assets/css/style.css">');
             echo('<link rel="stylesheet" href="../assets/css/dropdown.css">');
             echo('<link rel="stylesheet" href="../assets/css/desktop.css">');
             echo('<link rel="stylesheet" href="../assets/css/mobile.css">');
-            switch($this->pageName){
+            switch($this->pageName) {
             case 'home':
                 echo('<link rel="stylesheet" href="../assets/css/slider.css">');
                 break;
@@ -29,12 +28,18 @@
                 break; 
             case 'contact':
                 echo('<link rel="stylesheet" href="../assets/css/form.css">');
-                break;  
+                break; 
+            case 'login':
+                echo('<link rel="stylesheet" href="../assets/css/form.css">');
+                break; 
+            case 'admin':
+                echo('<link rel="stylesheet" href="../assets/css/form.css">');
+                break; 
             } 
         }
 
-        function addScripts(){
-            switch($this->pageName){
+        function addScripts() {
+            switch($this->pageName) {
             case 'home':
                 echo('<script src="../assets/js/slider.js"></script>');
                 break;

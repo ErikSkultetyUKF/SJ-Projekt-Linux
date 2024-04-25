@@ -14,7 +14,9 @@
         <a href="https://www.atatus.com/blog/top-10-linux-distros/" target="_blank">https://www.atatus.com/blog/top-10-linux-distros/</a>
     </div>
     <div>
-        <p>©2023-2024<br>Vytvoril a nadizajnoval - Erik Škultéty</p>
+        <h3>Zdrojový kód stránky:</h3>
+        <p><a href="https://github.com/ErikSkultetyUKF/Skultety-SJ-Projekt-Linux" target="_blank">https://github.com/ErikSkultetyUKF/Skultety-SJ-Projekt-Linux</a></p>
+        <p><b>©2023-2024 Vytvoril a nadizajnoval: Erik Škultéty</b></p>
     </div>
 </footer>
 

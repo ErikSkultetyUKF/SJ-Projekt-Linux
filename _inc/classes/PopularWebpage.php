@@ -1,22 +1,22 @@
 <?php
 
-    class PopularWebpage extends Database{
+    class PopularWebpage extends Database {
 
         private $db;
 
-        public function __construct(){
-            $this->db = $this->db_connection();
+        public function __construct() {
+            $this->db = $this->dbConnection();
         }
 
         // Vybrať všetky informácie z db
-        public function select(){
-            try{
+        public function select() {
+            try {
                 $sql = "SELECT * FROM popular_webpages";
                 $query = $this->db->query($sql);
                 $popularWebpages = $query->fetchAll();
                 return $popularWebpages;
 
-            }catch(PDOException $e){
+            } catch(PDOException $e) {
                 echo($e->getMessage());
             }   
         }

@@ -19,7 +19,7 @@
 
     ?>
 
-    <link rel="icon" href="./assets/img/misc/tux.png">
+    <link rel="icon" href="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png">
     <title>Linux</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
         <!-- Hamburger pre mobil -->
         <div class="dropdown">
             <button class="dropdown-button">
-                <img src="./assets/img/misc/menu.png" alt="ikona-hamburger-menu">
+                <img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/menu.png" alt="ikona-hamburger-menu">
             </button>
 
             <div class="dropdown-content">

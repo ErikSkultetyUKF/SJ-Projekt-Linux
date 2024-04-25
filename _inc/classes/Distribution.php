@@ -1,22 +1,22 @@
 <?php
 
-    class Distribution extends Database{
+    class Distribution extends Database {
 
         private $db;
 
-        public function __construct(){
-            $this->db = $this->db_connection();
+        public function __construct() {
+            $this->db = $this->dbConnection();
         }
 
         // Vybrať všetky informácie z db
-        public function select(){
-            try{
+        public function select() {
+            try {
                 $sql = "SELECT * FROM distributions";
                 $query = $this->db->query($sql);
                 $distributions = $query->fetchAll();
                 return $distributions;
 
-            }catch(PDOException $e){
+            } catch(PDOException $e) {
                 echo($e->getMessage());
             }   
         }

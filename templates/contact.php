@@ -10,11 +10,11 @@
     <!-- Formulár -->
     <form class="cent" action="thankyou.php" method="POST">
 
-        <label for="name">Vaše meno:</label><br>
-        <input type="name" class="email" name="name" placeholder="Meno Priezvisko" value="" required><br>
+        <label for="name">Vaše meno a priezvisko:</label><br>
+        <input type="name" class="entry" name="name" placeholder="Meno Priezvisko" value="" required><br>
 
         <label for="email">Váš e-mail:</label><br>
-        <input type="email" class="email" name="email" placeholder="meno@priklad.org" value="" required><br>
+        <input type="email" class="entry" name="email" placeholder="meno@priklad.org" value="" required><br>
     
         <label for="message">Vaša správa:</label><br>
         <textarea class="message" name="message" maxlength="250" required></textarea><br><br>
