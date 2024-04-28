@@ -1,18 +1,19 @@
 <?php
 include_once('partials/header.php');
-if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
+if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) {
     header('Location: 404.php');
 }
 ?> 
     <main>
         <h1>Admin rozhranie</h1>
-            <h2 class="cent">Kontakty</h2>
+            <h2 class="text-center">Kontakty</h2>
             <?php
                 $contactObject = new Contact();
                 $contacts = $contactObject->select();
 
                 echo '<table>';
-                echo '<tr><th>Meno</th>
+                echo '<tr>
+                        <th>Meno</th>
                         <th>Email</th>
                         <th>Správa</th>
                         <th>Súhlas</th>

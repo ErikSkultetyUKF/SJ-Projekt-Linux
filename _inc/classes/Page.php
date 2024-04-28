@@ -10,9 +10,10 @@
 
         function addStylesheets() {
             echo('<link rel="stylesheet" href="../assets/css/style.css">');
-            echo('<link rel="stylesheet" href="../assets/css/dropdown.css">');
+            echo('<link rel="stylesheet" href="../assets/css/topnav.css">');
             echo('<link rel="stylesheet" href="../assets/css/desktop.css">');
             echo('<link rel="stylesheet" href="../assets/css/mobile.css">');
+
             switch($this->pageName) {
             case 'home':
                 echo('<link rel="stylesheet" href="../assets/css/slider.css">');
@@ -39,6 +40,8 @@
         }
 
         function addScripts() {
+            echo('<script src="../assets/js/script.js"></script>');
+
             switch($this->pageName) {
             case 'home':
                 echo('<script src="../assets/js/slider.js"></script>');

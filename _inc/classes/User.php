@@ -22,7 +22,7 @@
                 $nRows = $queryRun->rowCount();
 
                 if($nRows == 1) {
-                    $_SESSION['logged_in'] = true;
+                    $_SESSION['loggedIn'] = true;
                     return true;
                 } else {
                     return false;

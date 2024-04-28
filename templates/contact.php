@@ -4,11 +4,11 @@
 
 <main>
 
-    <h1 class="cent">Máte otázky?</h1>
-    <h2 class="cent">Napíšte nám:</h2>
+    <h1 class="text-center">Máte otázky?</h1>
+    <h2 class="text-center">Napíšte nám:</h2>
 
     <!-- Formulár -->
-    <form class="cent" action="thankyou.php" method="POST">
+    <form class="text-center" action="thankyou.php" method="POST">
 
         <label for="name">Vaše meno a priezvisko:</label><br>
         <input type="name" class="entry" name="name" placeholder="Meno Priezvisko" value="" required><br>

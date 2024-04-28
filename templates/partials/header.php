@@ -12,11 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php
-
         $pageName = basename($_SERVER["SCRIPT_NAME"],'.php');
         $pageObject = new Page($pageName);
         $pageObject->addStylesheets();
-
     ?>
 
     <link rel="icon" href="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png">
@@ -26,33 +24,36 @@
 
 <!-- Header -->
 <header>
-    <nav class="navbar">
-        <!-- Logo PC -->
-        <img class="tux-nav" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png" alt="ikona-maskot-linuxu">
+    <div class="topnav" id="topnavId">
 
-        <!-- Hamburger pre mobil -->
-        <div class="dropdown">
-            <button class="dropdown-button">
-                <img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/menu.png" alt="ikona-hamburger-menu">
-            </button>
+        <!-- Logo -->
+        <a href="home.php" style="padding: 0px;">
+            <span><img id="logo" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png" alt="ikona-maskot-linuxu"></span>
+        </a>
 
-            <div class="dropdown-content">
-                <!-- Podstránky sa otvárajú v aktuálnej karte -->
-                <a href="home.php">Domov</a>
-                <a href="linux.php">O Linuxe</a>
-                <a href="distributions.php">Distribúcie</a>
-                <a href="community.php">Komunita</a>
-                <a href="contact.php">Kontakt</a>
+        <!-- Vyenerovať menu -->
+        <?php
 
-                <!-- Logo Mobil -->
-                <img class="tux-nav-mobile" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png" alt="ikona-maskot-linuxu">
-            </div>
-        </div>
-        <!-- Podstránky sa otvárajú v aktuálnej karte -->
-        <a href="home.php">Domov</a>
-        <a href="linux.php">O Linuxe</a>
-        <a href="distributions.php">Distribúcie</a>
-        <a href="community.php">Komunita</a>
-        <a href="contact.php">Kontakt</a>
-    </nav>
+            $pages = array('Domov' => 'home.php',
+                'O Linuxe' => 'linux.php',
+                'Distribúcie' => 'distributions.php',
+                'Komunita' => 'community.php',
+                'Kontakt' => 'contact.php'  
+            );
+
+            if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+                $pages['Odhlásiť sa'] = 'logout.php';
+            }
+
+            $menuObject = new Menu($pages);
+            echo($menuObject->generateMenu());
+        ?>
+
+        <!-- Hamburger menu -->
+        <a href="javascript:void(0);" class="icon" style="padding: 1rem 1.5rem;" onclick="showHamburgerMenu()">
+            <span><img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/menu.png" alt="ikona-menu"></span>
+        </a>
+    </div>
 </header>
+
+<!-- Obsah -->

@@ -23,7 +23,7 @@
 .accordion-content {
     display: none;
     margin-bottom: 0.625rem;
-    padding: 0.75rem 0.75rem;
+    padding: 0.75rem;
     overflow: hidden;
     width: 99%; /* Bez tejto vlastnosti je obsah o kúsok menší */
     background-color: #fff;

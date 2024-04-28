@@ -1,19 +1,5 @@
 /* Mobilné zobrazenie, zmeny velkostí + zobrazovanie/skrývanie */
 @media (max-width: 767px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav a {
-        display: none;
-    }
-    .dropdown {
-        display: inline-block;
-    }
-    /* Skryť obrázok navbaru */
-    .tux-nav {
-        display: none;
-    }
     /* Text a obrázok hl. stránky pod sebou */
     .container {
         grid-template-columns: 1fr;
@@ -24,10 +10,7 @@
     .distro-img {
         width: 100%;
     }
-    .entry {
-        width: 100%;
-    }
-    .message {
+    .entry, .message {
         width: 100%;
     }
     .gallery {

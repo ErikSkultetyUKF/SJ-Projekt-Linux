@@ -45,11 +45,17 @@
               for ($i = 0; $i < count($marketShare); $i++) {
                 echo '<tr>';
                 echo '<td>'.$marketShare[$i]->operating_system.'</td>';
-                echo '<td class="right">'.$marketShare[$i]->share.'</td>';
+                echo '<td class="text-right">'.$marketShare[$i]->share.'</td>';
                 echo '</tr>';
               }
             ?>
         </table>
+    </div>
+
+    <div class="zdroje">
+    <h3>Použité zdroje:</h3>
+        <a href="https://www.linux.com/what-is-linux/" target="_blank">https://www.linux.com/what-is-linux/</a><br>
+        <a href="https://gs.statcounter.com/os-market-share/" target="_blank">https://gs.statcounter.com/os-market-share/</a>
     </div>
 
 </main>

@@ -1,12 +1,5 @@
 /* Desktopové zobrazenie, zmeny velkostí + zobrazovanie/skrývanie */
 @media (min-width: 768px) {
-    /* Skryť dropdown */
-    .dropdown {
-        display: none;
-    }
-    .tux-nav-mobile {
-        display: none;
-    }
     /* Text a obrázok hl. stránky vedľa seba */
     .container {
         display: grid;
@@ -15,12 +8,9 @@
         height: 95vh;
     }
     .distro-img {
-        width: 50%;
+        width: 610px;
     }
-    .entry {
-        width: 33%;
-    }
-    .message {
-        width: 33%;
+    .entry, .message {
+        width: 500px;
     }
 }

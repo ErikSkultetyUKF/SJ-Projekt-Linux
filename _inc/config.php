@@ -13,6 +13,7 @@ require_once('classes/ContentCreator.php');
 require_once('classes/Distribution.php');
 require_once('classes/LinuxInfo.php');
 require_once('classes/MarketShare.php');
+require_once('classes/Menu.php');
 require_once('classes/Page.php');
 require_once('classes/PopularWebpage.php');
 require_once('classes/User.php');
