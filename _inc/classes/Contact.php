@@ -20,15 +20,32 @@
             }   
         }
 
+        public function selectSingle($contactId) {
+            try {
+                $data = array(
+                    'contactId'=>$contactId
+                );
+                $query = "SELECT * FROM contact WHERE id = :contactId";
+                $queryRun = $this->db->prepare($query);
+                $queryRun->execute($data);
+                
+                $contactData = $queryRun->fetch();
+                
+                return $contactData; 
+  
+          } catch(PDOException $e) {   
+                echo $e->getMessage();
+          } 
+      }
+
         public function insert() {
-            if($this->db){
-                // Spojenie s db;
+            if($this->db) {
                 if(isset($_POST['submitted'])) {
-                   // Formulár bol odoslaný;
-                   $data = array('contactName'=>$_POST['name'],
-                      'contactEmail'=>$_POST['email'],
-                      'contactMessage'=>$_POST['message'],
-                      'contactAcceptStatus'=>$_POST['acceptStatus'],
+                    $data = array(
+                        'contactName'=>$_POST['name'],
+                        'contactEmail'=>$_POST['email'],
+                        'contactMessage'=>$_POST['message'],
+                        'contactAcceptStatus'=>$_POST['acceptStatus'],
                     );
 
                     try {
@@ -44,9 +61,41 @@
                 } else {
                     echo 'Formulár nebol odoslaný';
                 }
-              } else {
-                echo 'Nemám spojenie';
-              }
+            } else {
+                    echo 'Nemám spojenie';
+            }
+        }
+        public function delete() {
+            try {
+                $data = array(
+                    'contactId' => $_POST['deleteContact']
+                );
+                $query = "DELETE FROM contact WHERE id = :contactId";
+                $queryRun = $this->db->prepare($query);
+                $queryRun->execute($data);
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+  
+        public function edit($contactId, $newData) {
+            try {
+                $data = array(
+                    'contactId' => $contactId,
+                    'contactName' => $newData['name'],
+                    'contactEmail' => $newData['email'],
+                    'contactMessage' => $newData['message']
+                );
+            
+                $query = "UPDATE contact SET name = :contactName, email = :contactEmail, message = :contactMessage WHERE id = :contactId";
+                $queryRun = $this->db->prepare($query);
+                $queryRun->execute($data);
+             
+    
+            } catch(PDOException $e) {
+                echo $e->getMessage();
+            }
         }
     }
 ?>

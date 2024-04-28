@@ -26,3 +26,9 @@
     width: 50%; 
     border: 1px solid #bbb; 
 }
+/* Admin rozhranie */
+.table-button {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+}

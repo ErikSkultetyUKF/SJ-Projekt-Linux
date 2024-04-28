@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 25, 2024 at 11:11 PM
+-- Generation Time: Apr 28, 2024 at 05:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,6 +34,14 @@ CREATE TABLE `contact` (
   `message` text NOT NULL,
   `accept_status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `message`, `accept_status`) VALUES
+(1, 'test', 'test@test.test', 'test', 'on'),
+(2, 'Test', 'test@mail.org', 'This is a line of text.', 'on');
 
 -- --------------------------------------------------------
 

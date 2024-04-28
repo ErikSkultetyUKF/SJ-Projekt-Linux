@@ -30,6 +30,9 @@
             case 'contact':
                 echo('<link rel="stylesheet" href="../assets/css/form.css">');
                 break; 
+            case 'contact-update':
+                echo('<link rel="stylesheet" href="../assets/css/form.css">');
+                break; 
             case 'login':
                 echo('<link rel="stylesheet" href="../assets/css/form.css">');
                 break; 
