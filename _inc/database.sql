@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 28, 2024 at 05:00 PM
+-- Generation Time: May 04, 2024 at 12:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -131,12 +131,11 @@ CREATE TABLE `market_share` (
 --
 
 INSERT INTO `market_share` (`id`, `operating_system`, `share`) VALUES
-(1, 'Android', '43.44%'),
-(2, 'Windows', '27.48%'),
-(3, 'iOS', '18.19%'),
-(4, 'OS X', '5.56%'),
-(5, 'Linux', '1.55%'),
-(6, 'Chrome OS', '0.86%');
+(1, 'Android', '42.73%'),
+(2, 'Windows', '28.08%'),
+(3, 'iOS', '17.93%'),
+(4, 'OS X', '5.72%'),
+(5, 'Linux', '1.52%');
 
 -- --------------------------------------------------------
 
@@ -166,21 +165,42 @@ INSERT INTO `popular_webpages` (`id`, `name`, `link`, `image`, `image_descriptio
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `slides`
+--
+
+CREATE TABLE `slides` (
+  `id` int(11) NOT NULL,
+  `image` text NOT NULL,
+  `image_description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `slides`
+--
+
+INSERT INTO `slides` (`id`, `image`, `image_description`) VALUES
+(1, '/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.svg', 'maskot-linuxu'),
+(2, '/Skultety-SJ-Projekt-Linux/assets/img/misc/tux2.png', 'maskot-linuxu-neoficialne');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` text NOT NULL,
-  `password` text NOT NULL
+  `password` text NOT NULL,
+  `role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`) VALUES
-(1, 'admin@admin.sk', 'admin');
+INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
+(1, 'admin@admin.sk', '21232f297a57a5a743894a0e4a801fc3', 1);
 
 --
 -- Indexes for dumped tables
@@ -220,6 +240,12 @@ ALTER TABLE `market_share`
 -- Indexes for table `popular_webpages`
 --
 ALTER TABLE `popular_webpages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `slides`
+--
+ALTER TABLE `slides`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -267,6 +293,12 @@ ALTER TABLE `market_share`
 --
 ALTER TABLE `popular_webpages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `slides`
+--
+ALTER TABLE `slides`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
