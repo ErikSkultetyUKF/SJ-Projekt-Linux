@@ -41,8 +41,15 @@
                 'Kontakt' => 'contact.php'  
             );
 
+            // Zobraziť logout link
             if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
                 $pages['Odhlásiť sa'] = 'logout.php';
+            }
+
+            // Zobraziť login a register link
+            if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) {
+                $pages['Prihlásenie'] = 'login.php';
+                $pages['Registrácia'] = 'register.php';
             }
 
             $menuObject = new Menu($pages);

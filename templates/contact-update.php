@@ -34,10 +34,10 @@
 ?>
 <main> <!-- To Do: Optimalizovať -->
     <br><br><br><br><br>
-    <div class="loginbox">
-        <h1 class="text-center">Upraviť kontakt</h1><br>
+    <div class="loginbox text-center">
+        <h1>Upraviť kontakt</h1><br>
 
-        <form class="text-center" action="" method="POST">
+        <form action="" method="POST">
             <label for="name">Meno:</label><br>
             <input type="text" class="entry" name="name" placeholder="Meno Priezvisko" value="<?php echo $name?>"><br>
 

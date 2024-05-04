@@ -35,6 +35,9 @@
                 break; 
             case 'login':
                 echo('<link rel="stylesheet" href="../assets/css/form.css">');
+                break;  
+            case 'register':
+                echo('<link rel="stylesheet" href="../assets/css/form.css">');
                 break; 
             case 'admin':
                 echo('<link rel="stylesheet" href="../assets/css/form.css">');

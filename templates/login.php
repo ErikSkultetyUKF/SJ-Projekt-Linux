@@ -7,9 +7,9 @@
 ?> 
     <main> <!-- To Do: Optimalizovať -->
         <br><br><br><br><br>
-        <div class="loginbox">
-            <h1 class="text-center">Prihlásenie</h1><br>
-            <form class="text-center" action="" method="POST">
+        <div class="loginbox text-center">
+            <h1>Prihlásenie</h1><br>
+            <form action="" method="POST">
                 <input type="email" class="entry" style="width: 60%;" name="email" placeholder="meno@priklad.org"><br>
                 <input type="password" class="entry" style="width: 60%;" name="password" placeholder="Heslo"><br><br><br>
                 <input type="submit" class="submit" value="Prihlásiť sa" name="userLogin">
@@ -28,7 +28,7 @@
                     header('Location: admin.php');
                     die();
                 } else {
-                    echo 'Nesprávne meno alebo heslo';
+                    echo '<p>Nesprávne meno alebo heslo</p>';
                 }
 
             }

@@ -2,13 +2,13 @@
     include_once("partials/header.php");
 ?>
 
-<main>
-
+<main> <!-- To Do: Optimalizovať -->
     <h1 class="text-center">Máte otázky?</h1>
-    <h2 class="text-center">Napíšte nám:</h2>
 
-    <!-- Formulár -->
-    <form class="text-center" action="thankyou.php" method="POST">
+    <!-- Formulár --> 
+    <div class="loginbox text-center">
+    <h1>Napíšte nám:</h1>
+    <form action="thankyou.php" method="POST">
 
         <label for="name">Vaše meno a priezvisko:</label><br>
         <input type="name" class="entry" name="name" placeholder="Meno Priezvisko" value="" required><br>
@@ -22,9 +22,10 @@
         <input type="checkbox" name="acceptStatus" required>
         <label>Súhlasím so spracovaním osobných údajov</label><br><br>
         
-        <input type="submit" class="submit" name="submitted" value="Odoslať">
+        <input type="submit" class="submit" name="submitted" value="Odoslať"><br><br><br>
 
     </form>
+</div>
 </main>
 
 <?php

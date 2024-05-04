@@ -16,6 +16,7 @@ require_once('classes/MarketShare.php');
 require_once('classes/Menu.php');
 require_once('classes/Page.php');
 require_once('classes/PopularWebpage.php');
+require_once('classes/Slideshow.php');
 require_once('classes/User.php');
 
 session_start();

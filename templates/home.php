@@ -16,13 +16,16 @@
         <div class="column-right">
             <div class="slideshow-container">
 
-                <div class="slideshow-content fade">
-                    <img class="img-350" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.svg" alt="maskot-linuxu">
-                </div>
+                <?php
+                    $slideshowObject = new Slideshow();
+                    $slideshow = $slideshowObject->select();
 
-                <div class="slideshow-content fade">
-                    <img class="img-350" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux2.png" alt="maskot-linuxu-neoficialne">
-                </div>
+                    for ($i = 0; $i < count($slideshow); $i++) {
+                        echo '<div class="slideshow-content fade">';
+                        echo '<img class="img-350" src="'.$slideshow[$i]->image.'" alt="'.$slideshow[$i]->image_description.'">';
+                        echo '</div>';
+                      }
+                ?>
             </div>
         </div>
     </div>

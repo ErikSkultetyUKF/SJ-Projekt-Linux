@@ -31,7 +31,7 @@
     <div class="accordion-content">
         <table>
             <tr>
-                <th colspan=2>Podiel na trhu - všetky platformy (marec 2024)</th>
+                <th colspan=2>Podiel na trhu - všetky platformy (apríl 2024)</th>
             </tr>
             <tr>
                 <th>Operačný systém</th>
