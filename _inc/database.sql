@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 09, 2024 at 08:20 PM
+-- Generation Time: May 09, 2024 at 08:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -165,8 +165,8 @@ CREATE TABLE `slides` (
 --
 
 INSERT INTO `slides` (`id`, `image`, `image_description`) VALUES
-(1, '/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.svg', 'maskot-linuxu'),
-(2, '/Skultety-SJ-Projekt-Linux/assets/img/misc/tux2.png', 'maskot-linuxu-neoficialne');
+(1, '/Skultety-SJ-Projekt-Linux/assets/img/slider/tux.svg', 'maskot-linuxu'),
+(2, '/Skultety-SJ-Projekt-Linux/assets/img/slider/tux2.png', 'maskot-linuxu-neoficialne');
 
 -- --------------------------------------------------------
 
