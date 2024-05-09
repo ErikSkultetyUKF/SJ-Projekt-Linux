@@ -1,114 +1,174 @@
-/* To Do
-    - optimalizácia 
-    - lepšia čitateľnosť (takmer hotovo)
-    - rozdelenie na menšie časti (takmer hotovo)
-    - zmena štýlu pre určitý obsah stránky
+/* 
+To Do
+- optimalizácia 
+- lepšia čitateľnosť (takmer hotovo)
+- rozdelenie na menšie časti (takmer hotovo)
+- zmena štýlu pre určitý obsah stránky (takmer hotovo)
 */
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
 body {
-    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    margin: 0;
     font-family: "liberation sans", "arial";
     font-size: 1.25rem;
     line-height: 1.5;
 }
-/* hl. obsah stránky - center */
+
+/* Every link */
+body a {
+    color: #444;
+    text-decoration: none;
+}
+
+/* Topnav */
+.topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f5f5ff;
+    z-index: 1;
+    font-size: 1.125rem;
+}
+/* Topnav link */
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    transition: all 200ms ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.topnav a:hover {
+    color: #9090ef;
+    border-bottom: 2px solid #a0a0ef;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/* Content */
 main {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
     margin-top: 100px;
     width: 80%;
+    color: #444;
 }
-.zdroje {
-    margin-top: 2.5rem;
-}
-.zdroje u {
-    color: #fa0;
-}
-.zdroje a {
-    color: #000;
-    text-decoration-color: #9bf;
-    text-decoration-thickness: 0.14375rem;
-}
-.zdroje a:hover {
-    color: #66f;
-}
+
 /* Footer */
-footer {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.25rem;
-    left:0;
-    right: 0;
-    bottom: 0;
-    gap: 5rem;
+    flex-direction: row;
+    column-gap: 5rem;
+    margin-top: auto;
+    padding: 1rem;
     font-size: 1rem;
-    text-align: center;
-    background-color: #222;
-    color: #fff;
+    background-color: #f5f5ff;
+    color: #444;
 }
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-/* Right */
+
+/* Text Align */
 .text-right {
     text-align: right;
 }
-/* Center */
 .text-center {
     text-align: center;
 }
-/* Table */
+
+/* Kontajner */
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    min-height: 100dvh;
+}
+.column-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+.column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* Zdroje */
+.zdroje {
+    margin-top: 2.5rem;
+}
+.zdroje a {
+    text-decoration: underline;
+    text-decoration-color: #9af;
+    text-decoration-thickness: 0.14375rem;
+    transition: all 200ms ease-in-out;
+}
+.zdroje a:hover {
+    color: #7070ef;
+}
+
+/* Image sizes */
+.img-350 {
+    width: 350px;
+}
+
+/* Table - nerespozívne */
 table, th, td {
     padding: 0.25rem;
-    width: 50%;
-    border: 1px solid #bbb;
+    border: 1px solid #a0a0ef;
     border-collapse: collapse;
 }
 table {
     margin-left: auto;
     margin-right: auto;
 }
-/* Text ďakujeme */
-.thankyou {
-    margin-top: 4.17em;
+/* Admin rozhranie */
+.table-button {
+    background-color: #fff;
+    border: 0;
+    width: 1rem;
+    cursor: pointer;
+}
+
+/* Ďalšie */
+
+.large-center {
+    margin-top: 3em;
     margin-bottom: 1em;
     font-size: 6rem;
     text-align: center;
 }
-/* Text hl. stránky */
-.column-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0rem 1rem;
+#logo {
+    height: 2.625rem; 
+    padding: 0.375rem 0.875rem 0.25rem;
 }
-.column-left h1 {
+#home-heading {
     margin-top: 15%;
     margin-bottom: 0rem;
     font-size: 3rem;
 }
-.column-left p {
+#home-text {
     width: 70%;
     font-size: 1.8rem;
     line-height: 1.5;
 }
-/* Obrázok hl. stránky */
-.column-right {
+#chart {
+    margin-left: auto;
+    margin-right: auto;
+}
+#distro-heading {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0rem 2rem;
-}
-.img-350 {
-    width: 350px;
-}
-#logo {
-    height: 2.625rem; 
-    padding: 0.375rem 0.875rem;
 }

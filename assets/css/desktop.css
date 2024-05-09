@@ -1,12 +1,5 @@
-/* Desktopové zobrazenie, zmeny velkostí + zobrazovanie/skrývanie */
-@media (min-width: 768px) {
-    /* Text a obrázok hl. stránky vedľa seba */
-    .container {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        padding: 3rem calc((100vw - 2000px) / 2);
-        height: 95vh;
-    }
+/* Desktopové zobrazenie, zmeny velkostí */
+@media screen and (min-width: 768px) {
     .distro-img {
         width: 610px;
     }

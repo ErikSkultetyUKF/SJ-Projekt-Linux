@@ -34,7 +34,7 @@
 ?>
 <main> <!-- To Do: Optimalizovať -->
     <br><br><br><br><br>
-    <div class="loginbox text-center">
+    <div class="form-box text-center">
         <h1>Upraviť kontakt</h1><br>
 
         <form action="" method="POST">
@@ -45,7 +45,7 @@
             <input type="email" class="entry" name="email" placeholder="meno@priklad.org" value="<?php echo $email?>"><br>
 
             <label for="message">Správa:</label><br>
-            <textarea class="message" name="message" maxlength="250"><?php echo $message?> </textarea><br><br><br>
+            <textarea class="message" name="message"><?php echo $message?> </textarea><br><br><br>
 
             <button type="submit" class="submit" name="editContactId" value="<?php echo $editContactId?>">Uložiť zmeny</button>
         </form><br><br>

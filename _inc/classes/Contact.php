@@ -59,10 +59,10 @@
                     }
 
                 } else {
-                    echo 'Formulár nebol odoslaný';
+                    echo '<p>Formulár nebol odoslaný</p>';
                 }
             } else {
-                    echo 'Nemám spojenie';
+                    echo '<p>Nebolo nadviazané spojenie</p>';
             }
         }
         public function delete() {

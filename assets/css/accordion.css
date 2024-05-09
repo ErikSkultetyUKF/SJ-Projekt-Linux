@@ -1,31 +1,30 @@
-/* Accordion */
-.accordion {
-    padding: 1rem 0.25rem;
-    margin-bottom: 0.625rem;
-    font-size: 2rem;
+/* Accordion button */
+.accordion-button {
+    padding: 1rem 0.75rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    width: 100%;
-    text-align: left;
-    border: 1px solid #bbb;
-    background-color: #fff;
+    background-color: #f5f5ff;
+    border-bottom: 1px solid #ccf;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 }
-/* Accordion hover */
-.accordion:hover {
-    border-color: #444;
+/* Accordion button hover */
+.accordion-button:hover {
+    border-color: #a0a0ef;
 }
 /* Otvorený accordion */
 .accordion-active {
-    background-color: #fff;
-    border-color: #444;
+    margin-bottom: 0.5rem;
+    background-color: #f5f5ff;
+    border-color: #a0a0ef;
 }
 /* Obsah */
 .accordion-content {
     display: none;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.5rem;
     padding: 0.75rem;
     overflow: hidden;
-    width: 99%; /* Bez tejto vlastnosti je obsah o kúsok menší */
     background-color: #fff;
-    border: 1px solid #444;
+    border: 1px solid #ccf;
+    transition: all 200ms ease-in-out;
 }

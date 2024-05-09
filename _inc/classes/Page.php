@@ -10,7 +10,6 @@
 
         function addStylesheets() {
             echo('<link rel="stylesheet" href="../assets/css/style.css">');
-            echo('<link rel="stylesheet" href="../assets/css/topnav.css">');
             echo('<link rel="stylesheet" href="../assets/css/desktop.css">');
             echo('<link rel="stylesheet" href="../assets/css/mobile.css">');
 
@@ -22,7 +21,7 @@
                 echo('<link rel="stylesheet" href="../assets/css/accordion.css">');
                 break; 
             case 'distributions':
-                echo('<link rel="stylesheet" href="../assets/css/accordion.css">');
+                echo('<link rel="stylesheet" href="../assets/css/gallery.css">');
                 break; 
             case 'community':
                 echo('<link rel="stylesheet" href="../assets/css/gallery.css">');
@@ -54,10 +53,7 @@
                 break;
             case 'linux':
                 echo('<script src="../assets/js/accordion.js"></script>');
-                break;  
-            case 'distributions':
-                echo('<script src="../assets/js/accordion.js"></script>');
-                break;  
+                break;
             } 
         }
     }

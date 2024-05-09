@@ -14,42 +14,24 @@
 
         <p>Ale okrem toho, že Linux je platformou desktopov, serverov a vstavaných systémov na celom svete, je jedným z najspoľahlivejších, najbezpečnejších a bezstarostných operačných systémov.</p>
 
-    <?php
-        $linuxInfoObject = new LinuxInfo();
-        $linuxInfo = $linuxInfoObject->select();
+    <div class="accordion">
+        <?php
+            $linuxInfoObject = new LinuxInfo();
+            $linuxInfo = $linuxInfoObject->select();
 
-        for ($i = 0; $i < count($linuxInfo); $i++) {
-          echo '<div class="accordion">'.$linuxInfo[$i]->title.'</div>';
-          echo '<div class="accordion-content"">';
-          echo '<p>'.$linuxInfo[$i]->text.'</p>';
-          echo '</div>';
-        }
-    ?>
+            for ($i = 0; $i < count($linuxInfo); $i++) {
+            echo '<div class="accordion-button">'.$linuxInfo[$i]->title.'</div>';
+            echo '<div class="accordion-content"">';
+            echo '<p>'.$linuxInfo[$i]->text.'</p>';
+            echo '</div>';
+            }
+        ?>
 
-    <!-- Tabuľka - Podiel na trhu -->
-    <div class="accordion">Podiel na trhu</div>
-    <div class="accordion-content">
-        <table>
-            <tr>
-                <th colspan=2>Podiel na trhu - všetky platformy (apríl 2024)</th>
-            </tr>
-            <tr>
-                <th>Operačný systém</th>
-                <th>Podiel</th>
-            </tr>
-
-            <?php
-              $marketShareObject = new MarketShare();
-              $marketShare = $marketShareObject->select();
-
-              for ($i = 0; $i < count($marketShare); $i++) {
-                echo '<tr>';
-                echo '<td>'.$marketShare[$i]->operating_system.'</td>';
-                echo '<td class="text-right">'.$marketShare[$i]->share.'</td>';
-                echo '</tr>';
-              }
-            ?>
-        </table>
+        <!-- Obrázok - Podiel na trhu -->
+        <div class="accordion-button">Podiel na trhu</div>
+        <div class="accordion-content">
+            <img id="chart" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/os-market-share-chart.png" alt="os-market-share-chart">
+        </div>
     </div>
 
     <div class="zdroje">

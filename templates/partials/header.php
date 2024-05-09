@@ -31,9 +31,10 @@
             <span><img id="logo" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png" alt="ikona-maskot-linuxu"></span>
         </a>
 
-        <!-- Vyenerovať menu -->
+        <!-- Menu -->
         <?php
 
+            // Linky
             $pages = array('Domov' => 'home.php',
                 'O Linuxe' => 'linux.php',
                 'Distribúcie' => 'distributions.php',
@@ -41,17 +42,21 @@
                 'Kontakt' => 'contact.php'  
             );
 
-            // Zobraziť logout link
+            // Zahrnúť logout link
             if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+                if($_SESSION['isAdmin'] == 1) {
+                    $pages['Admin'] = 'admin.php';
+                }
                 $pages['Odhlásiť sa'] = 'logout.php';
             }
 
-            // Zobraziť login a register link
+            // Zahrnúť login a register link
             if(!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) {
                 $pages['Prihlásenie'] = 'login.php';
                 $pages['Registrácia'] = 'register.php';
             }
 
+            // Vygenerovať menu
             $menuObject = new Menu($pages);
             echo($menuObject->generateMenu());
         ?>

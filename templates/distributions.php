@@ -13,23 +13,24 @@
     <!-- Vybrané distribúcie Linuxu, a základné informácie o nich -->
     <h1>Populárne distribúcie Linuxu</h1>
 
-    <?php
-        $distributionObject = new Distribution();
-        $distribution = $distributionObject->select();
+    <div class="accordion">
+        <?php
+            $distributionObject = new Distribution();
+            $distribution = $distributionObject->select();
 
-        for ($i = 0; $i < count($distribution); $i++) {
-            echo '<div class="accordion">'.$distribution[$i]->name.'</div>';
-            echo '<div class="accordion-content"">';
-            echo '<p>'.$distribution[$i]->description.'</p>';
-            echo '<img class="distro-img" src="'.$distribution[$i]->image.'" alt="'.$distribution[$i]->image_description.'">';
-            echo '</div>';
-        }
-    ?>
+            for ($i = 0; $i < count($distribution); $i++) {
+                echo('<div class="gallery">');
+                echo('<a href="../templates/distribution.php?id='.$distribution[$i]->id.'">');
+                echo('<img style="height: 210px; width: 210px;" src="'.$distribution[$i]->logo.'" alt="'.$distribution[$i]->logo_description.'">');
+                echo('<div class="gallery-text text-center">'.$distribution[$i]->name.'</div></a>');
+                echo('</div>');
+            }
+        ?>
+    </div>
 
     <div class="zdroje">
     <h3>Použité zdroje:</h3>
-        <a href="https://www.linux.com/what-is-linux/" target="_blank">https://www.linux.com/what-is-linux/</a><br>
-        <a href="https://www.atatus.com/blog/top-10-linux-distros/" target="_blank">https://www.atatus.com/blog/top-10-linux-distros/</a>
+        <a href="https://www.linux.com/what-is-linux/" target="_blank">https://www.linux.com/what-is-linux/</a>
     </div>
  
 </main>

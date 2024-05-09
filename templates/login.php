@@ -6,14 +6,20 @@
     }
 ?> 
     <main> <!-- To Do: Optimalizovať -->
-        <br><br><br><br><br>
-        <div class="loginbox text-center">
+        <br><br><br><br>
+        <div class="form-box text-center">
             <h1>Prihlásenie</h1><br>
             <form action="" method="POST">
+
+                <label for="email">E-mail:</label><br>
                 <input type="email" class="entry" style="width: 60%;" name="email" placeholder="meno@priklad.org"><br>
+
+                <label for="password">Heslo:</label><br>
                 <input type="password" class="entry" style="width: 60%;" name="password" placeholder="Heslo"><br><br><br>
+
                 <input type="submit" class="submit" value="Prihlásiť sa" name="userLogin">
-            </form><br><br>
+
+            </form>
         </div><br><br><br>
         <?php
 
@@ -32,7 +38,6 @@
                 }
 
             }
-        
         ?>
     </main>
     

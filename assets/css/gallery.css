@@ -2,26 +2,25 @@
 .gallery {
     display: inline-flex;
     margin: 0.25rem;
-    width: 200px;
-    border: 1px solid #bbb;
+    width: 210px;
+    background-color: #f5f5ff;
+    border: 1px solid transparent;
+    transition: all 100ms ease-in-out;
+    border-radius: 1.5rem;
 }
 .gallery:hover {
-    border: 1px solid #444;
+    border: 1px solid #a0a0ef;
 }
 /* Div pre text linku */
 .gallery-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     font-weight: bold;
     height: 100px;
 }
 .gallery img {
     width: 100%;
     height: auto;
-}
-.gallery a {
-    color: #000;
-    text-decoration: none;
+    border-radius: 1.5rem 1.5rem 0 0;
 }

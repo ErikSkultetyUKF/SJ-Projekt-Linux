@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 04, 2024 at 12:47 PM
+-- Generation Time: May 09, 2024 at 08:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,7 +32,7 @@ CREATE TABLE `contact` (
   `name` text NOT NULL,
   `email` text NOT NULL,
   `message` text NOT NULL,
-  `accept_status` text NOT NULL
+  `accept_status` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
@@ -40,8 +40,12 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `name`, `email`, `message`, `accept_status`) VALUES
-(1, 'test', 'test@test.test', 'test', 'on'),
-(2, 'Test', 'test@mail.org', 'This is a line of text.', 'on');
+(1, 'test', 'test@test.test', 'test', 1),
+(2, 'Test', 'test@mail.org', 'This is a line of text.', 1),
+(4, 'Test Testovací', 'test.testovaci@testmail.test', 'Táto veta bola napísaná pre testovacie účely.', 1),
+(5, 'Meno Priezvisko', 'meno@priklad.org', 'Sem napíšte Vašu správu', 1),
+(6, 'John Doe', 'john.doe@lorem.net', 'Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 1),
+(7, 'Jane Doe', 'jane.doe@lorem.net', 'Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 1);
 
 -- --------------------------------------------------------
 
@@ -65,8 +69,9 @@ INSERT INTO `content_creators` (`id`, `name`, `link`, `image`, `image_descriptio
 (1, 'The Linux Experiment (YouTube)', 'https://youtube.com/channel/UC5UAwBUum7CPN5buc-_N1Fw/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/the-linux-experiment.png', 'the-linux-experiment-logo'),
 (2, 'Learn Linux TV (YouTube)', 'https://youtube.com/channel/UCxQKHvKbmSzGMvUrVtJYnUA/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/learn-linux-tv.png', 'learn-linux-tv-logo'),
 (3, 'DistroTube (YouTube)', 'https://youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/distrotube.png', 'distrotube-logo'),
-(4, 'Chris Titus Tech (YouTube)', 'https://youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/ctt.png', 'chris-titus-tech-logo'),
-(5, 'TechHut (YouTube)', 'https://youtube.com/channel/UCjSEJkpGbcZhvo0lr-44X_w/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/techhut.png', 'techhut-logo');
+(4, 'TechHut (YouTube)', 'https://youtube.com/channel/UCjSEJkpGbcZhvo0lr-44X_w/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/techhut.png', 'techhut-logo'),
+(5, 'Linux Tex (Youtube)', 'https://youtube.com/channel/UCS25Y-2DUke9uOU5OtLwwgg', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/linux-tex.png', 'linux-tex-logo'),
+(6, 'Chris Titus Tech (YouTube)', 'https://youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/ctt.png', 'chris-titus-tech-logo');
 
 -- --------------------------------------------------------
 
@@ -79,19 +84,22 @@ CREATE TABLE `distributions` (
   `name` text NOT NULL,
   `description` text NOT NULL,
   `image` text NOT NULL,
-  `image_description` text NOT NULL
+  `image_description` text NOT NULL,
+  `logo` text NOT NULL,
+  `logo_description` text NOT NULL,
+  `website` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
 -- Dumping data for table `distributions`
 --
 
-INSERT INTO `distributions` (`id`, `name`, `description`, `image`, `image_description`) VALUES
-(1, 'Linux Mint', 'Linux Mint sa stal jednou z najlepších distribúcií pre začínajúcich používateľov Linuxu vďaka jednoduchému použitiu. Je to operačný systém založený na Ubuntu, ktorý je vhodný na každodenné používanie a hranie hier. Vďaka pocitu Mintu ako Windows sa používatelia, ktorí prechádzajú z Windowsu, cítia ako doma a je jedným z hlavných predajných bodov distribúcie.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/mint.png', 'linux-mint'),
-(2, 'Manjaro', 'Manjaro sa špeciálne zameriava na dostupnosť a užívateľskú prívetivosť. Vyznačuje sa rolovacím uvoľňovacím modelom. Jeho jednoduchosť, stabilita a výkon z neho robí vhodnú alternatívu OS k MacOS a Windows. Ponúka viacero desktopových prostredí.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/manjaro.png', 'manjaro'),
-(3, 'Fedora', 'Fedora, postavená a udržiavaná projektom Fedora (a sponzorovaná Red Hat), celosvetovou komunitou dobrovoľníkov a vývojárov, je už roky jednou z najpoužívanejších distribúcií. Snáď najvýraznejšou charakteristikou Fedory je, že je vždy na čele integrácie nových verzií balíkov a technológií do distribúcie.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/fedora.png', 'fedora'),
-(4, 'Debian', 'Debian je rozšírenou alternatívou pre používateľov, ktorí chcú maximálnu odolnosť a dôveryhodnosť. Funguje od roku 1993 a stále pravidelne uvádza na trh najnovšie verzie. Počas životnosti každého balíka poskytuje racionálnu predvolenú konfiguráciu a časté aktualizácie zabezpečenia. Okrem toho Debian slúži ako framework pre mnohé známe distribúcie Linuxu, najmä Ubuntu, Knoppix, PureOS a Tails.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/debian.png', 'debian'),
-(5, 'OpenSUSE Leap', 'OpenSUSE Leap je zameraná na profesionálne použitie. Je založená na SUSE Linux Enterprise Server a bola vytvorená s cieľom poskytnúť robustný, dôveryhodný a bezpečný operačný systém. OpenSUSE Leap tiež prichádza s množstvom nástrojov, ktoré sú navrhnuté tak, aby zefektívnili vašu prácu. Má ďalšie funkcie, ktoré z neho robia fantastickú možnosť pre podniky. V prvom rade ide o veľmi stabilnú distribúciu.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/opensuse-leap.png', 'opensuse-leap');
+INSERT INTO `distributions` (`id`, `name`, `description`, `image`, `image_description`, `logo`, `logo_description`, `website`) VALUES
+(1, 'Linux Mint', 'Linux Mint sa stal jednou z najlepších distribúcií pre začínajúcich používateľov Linuxu vďaka jednoduchému použitiu. Je to operačný systém založený na Ubuntu, ktorý je vhodný na každodenné používanie a hranie hier. Vďaka pocitu Mintu ako Windows sa používatelia, ktorí prechádzajú z Windowsu, cítia ako doma a je jedným z hlavných predajných bodov distribúcie.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/mint.png', 'linux-mint', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/mint.svg', 'linux-mint-logo', 'https://linuxmint.com/'),
+(2, 'Manjaro', 'Manjaro sa špeciálne zameriava na dostupnosť a užívateľskú prívetivosť. Vyznačuje sa rolovacím uvoľňovacím modelom. Jeho jednoduchosť, stabilita a výkon z neho robí vhodnú alternatívu OS k MacOS a Windows. Ponúka viacero desktopových prostredí.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/manjaro.png', 'manjaro', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/manjaro.svg', 'manjaro-logo', 'https://manjaro.org/'),
+(3, 'Fedora', 'Fedora, postavená a udržiavaná projektom Fedora (a sponzorovaná Red Hat), celosvetovou komunitou dobrovoľníkov a vývojárov, je už roky jednou z najpoužívanejších distribúcií. Snáď najvýraznejšou charakteristikou Fedory je, že je vždy na čele integrácie nových verzií balíkov a technológií do distribúcie.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/fedora.png', 'fedora', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/fedora.svg', 'fedora-logo', 'https://fedoraproject.org/'),
+(4, 'Debian', 'Debian je rozšírenou alternatívou pre používateľov, ktorí chcú maximálnu odolnosť a dôveryhodnosť. Funguje od roku 1993 a stále pravidelne uvádza na trh najnovšie verzie. Počas životnosti každého balíka poskytuje racionálnu predvolenú konfiguráciu a časté aktualizácie zabezpečenia. Okrem toho Debian slúži ako framework pre mnohé známe distribúcie Linuxu, najmä Ubuntu, Knoppix, PureOS a Tails.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/debian.png', 'debian', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/debian.svg', 'debian-logo', 'https://www.debian.org/'),
+(5, 'OpenSUSE Leap', 'OpenSUSE Leap je zameraná na profesionálne použitie. Je založená na SUSE Linux Enterprise Server a bola vytvorená s cieľom poskytnúť robustný, dôveryhodný a bezpečný operačný systém. OpenSUSE Leap tiež prichádza s množstvom nástrojov, ktoré sú navrhnuté tak, aby zefektívnili vašu prácu. Má ďalšie funkcie, ktoré z neho robia fantastickú možnosť pre podniky. V prvom rade ide o veľmi stabilnú distribúciu.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/opensuse-leap.png', 'opensuse-leap', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/opensuse-leap.svg', 'opensuse-leap-logo', 'https://www.opensuse.org/');
 
 -- --------------------------------------------------------
 
@@ -117,29 +125,6 @@ INSERT INTO `linux_info` (`id`, `title`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `market_share`
---
-
-CREATE TABLE `market_share` (
-  `id` int(11) NOT NULL,
-  `operating_system` text NOT NULL,
-  `share` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
-
---
--- Dumping data for table `market_share`
---
-
-INSERT INTO `market_share` (`id`, `operating_system`, `share`) VALUES
-(1, 'Android', '42.73%'),
-(2, 'Windows', '28.08%'),
-(3, 'iOS', '17.93%'),
-(4, 'OS X', '5.72%'),
-(5, 'Linux', '1.52%');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `popular_webpages`
 --
 
@@ -158,9 +143,10 @@ CREATE TABLE `popular_webpages` (
 INSERT INTO `popular_webpages` (`id`, `name`, `link`, `image`, `image_description`) VALUES
 (1, 'It\'s FOSS', 'https://itsfoss.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/itsfoss.png', 'its-foss-logo'),
 (2, '9to5linux', 'https://9to5linux.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/9to5linux.png', '9to5linux-logo'),
-(3, 'OMG! Ubuntu', 'https://omgubuntu.co.uk/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/omg-ubuntu.png', 'omg-ubuntu-logo'),
-(4, 'Ask Ubuntu', 'https://askubuntu.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/ask-ubuntu.png', 'ask-ubuntu-logo'),
-(5, 'nixCraft', 'https://nixcraft.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/nixcraft.png', 'nixcraft-logo');
+(3, 'How-To Geek (Linux Category)', 'https://www.howtogeek.com/category/linux/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/htg-logo.png', 'how-to-geek-logo'),
+(4, 'OMG! Ubuntu', 'https://omgubuntu.co.uk/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/omg-ubuntu.png', 'omg-ubuntu-logo'),
+(5, 'Ask Ubuntu', 'https://askubuntu.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/ask-ubuntu.png', 'ask-ubuntu-logo'),
+(6, 'nixCraft', 'https://nixcraft.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/nixcraft.png', 'nixcraft-logo');
 
 -- --------------------------------------------------------
 
@@ -200,7 +186,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
-(1, 'admin@admin.sk', '21232f297a57a5a743894a0e4a801fc3', 1);
+(1, 'admin@admin.sk', '21232f297a57a5a743894a0e4a801fc3', 1),
+(2, 'user@user.sk', 'ee11cbb19052e40b07aac0ca060c23ee', 0);
 
 --
 -- Indexes for dumped tables
@@ -231,12 +218,6 @@ ALTER TABLE `linux_info`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `market_share`
---
-ALTER TABLE `market_share`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `popular_webpages`
 --
 ALTER TABLE `popular_webpages`
@@ -262,13 +243,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `content_creators`
 --
 ALTER TABLE `content_creators`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `distributions`
@@ -283,16 +264,10 @@ ALTER TABLE `linux_info`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `market_share`
---
-ALTER TABLE `market_share`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT for table `popular_webpages`
 --
 ALTER TABLE `popular_webpages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `slides`
@@ -304,7 +279,7 @@ ALTER TABLE `slides`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
