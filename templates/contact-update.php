@@ -33,7 +33,7 @@
     
 ?>
 <main> <!-- To Do: Optimalizovať -->
-    <br><br><br><br><br>
+    <br><br><br><br>
     <div class="form-box text-center">
         <h1>Upraviť kontakt</h1><br>
 
@@ -48,7 +48,7 @@
             <textarea class="message" name="message"><?php echo $message?> </textarea><br><br><br>
 
             <button type="submit" class="submit" name="editContactId" value="<?php echo $editContactId?>">Uložiť zmeny</button>
-        </form><br><br>
+        </form>
     </div><br><br><br>
 </main>
     
