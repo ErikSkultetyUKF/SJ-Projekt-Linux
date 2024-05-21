@@ -27,17 +27,17 @@
     
         $contactObject->edit($editContactId, $newData);
     
-        header('Location: admin.php');
+        header('Location: profile.php');
         exit();
     }
     
 ?>
-<main> <!-- To Do: Optimalizovať -->
-    <br><br><br><br>
-    <div class="form-box text-center">
+<main>
+    <div class="form-box text-center margin-middle-4">
         <h1>Upraviť kontakt</h1><br>
 
         <form action="" method="POST">
+
             <label for="name">Meno:</label><br>
             <input type="text" class="entry" name="name" placeholder="Meno Priezvisko" value="<?php echo $name?>"><br>
 
@@ -48,8 +48,9 @@
             <textarea class="message" name="message"><?php echo $message?> </textarea><br><br><br>
 
             <button type="submit" class="submit" name="editContactId" value="<?php echo $editContactId?>">Uložiť zmeny</button>
+
         </form>
-    </div><br><br><br>
+    </div>
 </main>
     
 <?php

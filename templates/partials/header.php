@@ -44,9 +44,7 @@
 
             // Zahrnúť logout link
             if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
-                if($_SESSION['isAdmin'] == 1) {
-                    $pages['Admin'] = 'admin.php';
-                }
+                $pages['Profil'] = 'profile.php';
                 $pages['Odhlásiť sa'] = 'logout.php';
             }
 

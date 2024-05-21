@@ -27,6 +27,7 @@
 /* Form Entry */
 .entry {
     height: 1.5rem;
+    width: 60%;
     font-size: 1rem;
     background-color: #f5f5ff;
     border: none;
@@ -36,9 +37,12 @@
 .message {
     padding: 0.2rem;
     height: 10rem;
+    min-height: 10rem;
+    max-height: 20rem;
+    width: 60%;
     font-size: 1rem;
     font-family: inherit;
-    resize: none;
+    resize: vertical;
     background-color: #f5f5ff;
     border: 1px solid #a0a0ef;
     border-radius: 0.5rem;

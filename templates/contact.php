@@ -2,12 +2,13 @@
     include_once("partials/header.php");
 ?>
 
-<main> <!-- To Do: Optimalizovať -->
+<main>
     <h1 class="text-center">Máte otázky?</h1><br>
 
     <!-- Formulár --> 
     <div class="form-box text-center">
         <h1>Napíšte nám:</h1>
+
         <form action="thankyou.php" method="POST">
 
             <label for="name">Vaše meno a priezvisko:</label><br>

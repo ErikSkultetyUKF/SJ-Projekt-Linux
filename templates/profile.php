@@ -8,9 +8,9 @@
     <main>
         <?php
             if($_SESSION['isAdmin'] == 1) {
-                include_once('partials/admin-contact.php');
+                include_once('partials/admin-ui.php');
             } else {
-                echo '<h1 class="large-center">COMING SOON</h1><br><br><br><br><br>';
+                include_once('partials/newsletter.php');
             }
         ?>
     </main>

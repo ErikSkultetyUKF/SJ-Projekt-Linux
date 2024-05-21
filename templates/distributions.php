@@ -21,7 +21,8 @@
             for ($i = 0; $i < count($distribution); $i++) {
                 echo('<div class="gallery">');
                 echo('<a href="../templates/distribution.php?id='.$distribution[$i]->id.'">');
-                echo('<img style="height: 210px; width: 210px;" src="'.$distribution[$i]->logo.'" alt="'.$distribution[$i]->logo_description.'">');
+                 // Neresponzívny svg obrázok
+                echo('<img class="gallery-img-fixed-210" src="'.$distribution[$i]->logo.'" alt="'.$distribution[$i]->logo_description.'">');
                 echo('<div class="gallery-text text-center">'.$distribution[$i]->name.'</div></a>');
                 echo('</div>');
             }
@@ -29,7 +30,7 @@
     </div>
 
     <div class="zdroje">
-    <h3>Použité zdroje:</h3>
+        <h3>Použité zdroje:</h3>
         <a href="https://www.linux.com/what-is-linux/" target="_blank">https://www.linux.com/what-is-linux/</a>
     </div>
  

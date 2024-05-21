@@ -10,9 +10,20 @@
     .container {
         grid-template-columns: 1fr;
     }
-    #home-text, .distro-img, .entry, .message, .gallery, table {
-        width: 100%;
+    .footer {
+        flex-direction: column;
     }
+    #home-text, .distro-img, .gallery, table {
+        width: 100% !important;
+    }
+    .entry, .message {
+        width: 80% !important;
+    }
+
+    /* Pre logá distribúcií */
+    /* .gallery-img-fixed-210 {
+        width: 100%;
+    } */
 
     /* Topnav */
     .topnav a:not(:first-child) {

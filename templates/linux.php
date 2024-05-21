@@ -30,12 +30,13 @@
         <!-- Obrázok - Podiel na trhu -->
         <div class="accordion-button">Podiel na trhu</div>
         <div class="accordion-content">
+            <!-- Neresponzívne -->
             <img id="chart" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/os-market-share-chart.png" alt="os-market-share-chart">
         </div>
     </div>
 
     <div class="zdroje">
-    <h3>Použité zdroje:</h3>
+        <h3>Použité zdroje:</h3>
         <a href="https://www.linux.com/what-is-linux/" target="_blank">https://www.linux.com/what-is-linux/</a><br>
         <a href="https://gs.statcounter.com/os-market-share/" target="_blank">https://gs.statcounter.com/os-market-share/</a>
     </div>

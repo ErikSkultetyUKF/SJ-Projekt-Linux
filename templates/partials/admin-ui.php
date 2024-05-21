@@ -1,6 +1,7 @@
+<h1 class="text-center">Admin rozhranie</h1>
+<h1 class="text-center">Kontakty</h1>
+
 <?php
-    echo '<h1 class="text-center">Admin rozhranie</h1>';
-    echo '<h1 class="text-center">Kontakty</h1>';
     $contactObject = new Contact();
     $contacts = $contactObject->select();
 

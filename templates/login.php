@@ -5,9 +5,8 @@
         header('Location: admin.php');
     }
 ?> 
-    <main> <!-- To Do: Optimalizovať -->
-        <br><br><br><br>
-        <div class="form-box text-center">
+    <main>
+        <div class="form-box text-center margin-middle-7">
             <h1>Prihlásenie</h1><br>
             <form action="" method="POST">
 
@@ -20,7 +19,7 @@
                 <input type="submit" class="submit" value="Prihlásiť sa" name="userLogin">
 
             </form>
-        </div><br><br><br>
+        </div>
         <?php
 
             if(isset($_POST['userLogin'])){
@@ -31,7 +30,7 @@
 
                 $loginSuccess = $userObject->login($email,$password);
                 if($loginSuccess == true) {
-                    header('Location: admin.php');
+                    header('Location: profile.php');
                     die();
                 } else {
                     echo '<p>Nesprávne meno alebo heslo</p>';

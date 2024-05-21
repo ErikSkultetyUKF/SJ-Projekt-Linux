@@ -3,7 +3,7 @@
 ?>
 
 <main>
-    <h1 class="large-center">Ďakujeme</h1><br><br><br><br><br>
+    <h1 class="h-xxxlarge text-center margin-middle">Ďakujeme</h1>
     <?php
         $contactObject = new Contact();
         $contactObject->insert();

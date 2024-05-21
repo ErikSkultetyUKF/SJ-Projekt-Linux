@@ -14,7 +14,7 @@
 
                 $loginSuccess = $userObject->login($email,$password);
                 if($loginSuccess == true) {
-                    header('Location: admin.php');
+                    header('Location: profile.php');
                     die();
                 }
 
@@ -27,10 +27,10 @@
     }
 ?>
 
-    <main> <!-- To Do: Optimalizovať -->
-        <br><br><br><br><br>
-        <div class="form-box text-center">
+    <main>
+        <div class="form-box text-center margin-middle-7">
             <h1>Registrácia</h1>
+
             <form action="" method="POST">
 
                 <label for="email">E-mail:</label><br>
@@ -39,13 +39,13 @@
                 <label for="password">Heslo:</label><br>
                 <input type="password" class="entry" name="password" placeholder="Heslo" required><br>
 
-                <label for="confirmPassword">Zopakovať heslo:</label><br>
+                <label for="confirmPassword">Zopakujte heslo:</label><br>
                 <input type="password" class="entry" name="confirmPassword" placeholder="Zopakované heslo" required><br><br><br>
 
                 <input type="submit" class="submit" name="userRegister" value="Registrovať sa">
 
             </form>
-        </div><br><br><br>
+        </div>
     </main>
 
 <?php

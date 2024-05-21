@@ -19,7 +19,7 @@
     ?>
     
     <div class="zdroje">
-    <h3>Použité zdroje:</h3>
+        <h3>Použité zdroje:</h3>
         <a href="https://www.atatus.com/blog/top-10-linux-distros/" target="_blank">https://www.atatus.com/blog/top-10-linux-distros/</a>
     </div>
 </main>
