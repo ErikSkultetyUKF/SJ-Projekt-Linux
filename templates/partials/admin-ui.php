@@ -8,7 +8,7 @@
     if(isset($_POST['deleteContact'])){
         $contactId = $_POST['deleteContact'];
         $contactObject->delete($contactId);
-        header('Location: admin.php');
+        header('Location: profile.php');
         die();
     }
 

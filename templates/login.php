@@ -2,7 +2,7 @@
     include_once('partials/header.php');
 
     if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
-        header('Location: admin.php');
+        header('Location: profile.php');
     }
 ?> 
     <main>
