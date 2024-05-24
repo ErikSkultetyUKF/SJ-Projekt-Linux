@@ -4,7 +4,7 @@
 <main>
     <?php    
         $distributionObject = new Distribution();
-        $distributionSingle = $distributionObject->selectSingle();
+        $distributionSingle = $distributionObject->selectSingle($_GET['id']);
 
         echo '<div id="distro-heading">';
         echo '<img id="logo" src="'.$distributionSingle->logo.'" alt="'.$distributionSingle->logo_description.'">';
