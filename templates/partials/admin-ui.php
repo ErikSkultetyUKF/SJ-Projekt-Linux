@@ -33,13 +33,13 @@
         // Tlačidlo upraviť
         echo '<td>
                 <form class="text-center" action="contact-update.php" method="POST">
-                    <button class="table-button" type="submit" name="editContact" value="'.$c->id.'"'.'><img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/edit.png" class="table-button"></button>
+                    <button class="table-button" type="submit" name="editContact" value="'.$c->id.'"'.'><img src="../assets/img/misc/edit.png" class="table-button"></button>
                 </form>
                 </td>';
         // Tlačidlo odstrániť
         echo '<td>
                 <form class="text-center" action="" method="POST">
-                    <button class="table-button" type="submit" name="deleteContact" value="'.$c->id.'"'.'><img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/delete.png" class="table-button"></button>
+                    <button class="table-button" type="submit" name="deleteContact" value="'.$c->id.'"'.'><img src="../assets/img/misc/delete.png" class="table-button"></button>
                 </form>
                 </td>';
         echo '</tr>';
