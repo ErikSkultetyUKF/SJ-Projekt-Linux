@@ -8,7 +8,7 @@
             $this->db = $this->dbConnection();
         }
 
-        // Vybrať všetky informácie z db
+        // Vybrať všetkých tvorcov z db
         public function select() {
             try {
                 $sql = "SELECT * FROM content_creators";

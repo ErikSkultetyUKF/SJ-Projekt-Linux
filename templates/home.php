@@ -11,7 +11,7 @@
             <p id="home-text">Výkonný operačný systém s otvoreným zdrojovým kódom založený na Unixe a schopný bežať na rôznom hardvéri s vysokými prevádzkovými nárokmi.</p>
         </div>
 
-        <!-- Obrázok -->
+        <!-- Slideshow -->
         <div class="column-right">
             <div class="slideshow-container">
 

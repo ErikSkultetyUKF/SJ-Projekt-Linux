@@ -8,6 +8,7 @@
             $this->db = $this->dbConnection();
         }
 
+        // Prihlásenie
         public function login($email, $password) {
             try {
                 $data = array(
@@ -18,9 +19,9 @@
                 $sql = "SELECT * FROM users WHERE email = :userEmail AND password = :userPassword";
                 $queryRun = $this->db->prepare($sql);
                 $queryRun->execute($data);
-                $nRows = $queryRun->rowCount();
+                $nRows = $queryRun->rowCount(); // Vráti počet vybraných riadok
 
-                if($nRows == 1) {
+                if($nRows == 1) { // Vybraný presne 1 riadok
                     $_SESSION['loggedIn'] = true;
                     $_SESSION['isAdmin'] = $queryRun->fetch()->role;
                     return true;
@@ -32,6 +33,8 @@
                 echo $e->getMessage();
             }
         }
+
+        // Registrácia
         public function register($email, $password) {
             try {
                 $data = array(

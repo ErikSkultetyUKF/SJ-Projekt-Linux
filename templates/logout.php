@@ -1,8 +1,9 @@
 <?php
-include('partials/header.php');
+    include('partials/header.php');
 ?>
 <main>
     <?php
+        // Odhlásenie
         unset($_SESSION['loggedIn']);
         header('Location: login.php');
     ?>

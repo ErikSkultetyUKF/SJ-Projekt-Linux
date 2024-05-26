@@ -8,7 +8,7 @@
             $this->db = $this->dbConnection();
         }
 
-        // Vybrať všetky informácie z db
+        // Vybrať všetky slidy z db
         public function select() {
             try {
                 $sql = "SELECT * FROM slides";

@@ -5,6 +5,7 @@
     $newsletterObject = new Newsletter();
     $newsletters = $newsletterObject->select();
 
+    // Vygenerovať newslettery
     for ($i = 0; $i < count($newsletters); $i++) {
         echo '<article class="text-left margin-bottom-5">';
         echo '<h1 class="textc-base">'.$newsletters[$i]->title.'</h1>';

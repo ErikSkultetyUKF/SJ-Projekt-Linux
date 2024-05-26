@@ -11,7 +11,7 @@
     <meta name="author" content="Erik Škultéty">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php
+    <?php // Pridať css štýly podľa názvu súbora
         $pageName = basename($_SERVER["SCRIPT_NAME"],'.php');
         $pageObject = new Page($pageName);
         $pageObject->addStylesheets();

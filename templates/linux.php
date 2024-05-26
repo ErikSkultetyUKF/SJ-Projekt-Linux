@@ -6,19 +6,22 @@
 
     <!-- Základné informácie -->
     <h1>Čo je to Linux?</h1>
-        <p>Rovnako ako Windows, iOS a Mac OS, aj Linux je operačný systém. V skutočnosti jedna z najpopulárnejších platforiem na svete, Android, je poháňaná operačným systémom Linux.</p>
 
-        <p>Linux existuje od polovice 90-tych rokov a odvtedy dosiahol používateľskú základňu, ktorá pokrýva celý svet.</p>
+    <p>Rovnako ako Windows, iOS a Mac OS, aj Linux je operačný systém. V skutočnosti jedna z najpopulárnejších platforiem na svete, Android, je poháňaná operačným systémom Linux.</p>
 
-        <p>Od smartfónov po autá, superpočítače a domáce spotrebiče, domáce desktopy až po podnikové servery, operačný systém Linux je všade.</p>
+    <p>Linux existuje od polovice 90-tych rokov a odvtedy dosiahol používateľskú základňu, ktorá pokrýva celý svet.</p>
 
-        <p>Ale okrem toho, že Linux je platformou desktopov, serverov a vstavaných systémov na celom svete, je jedným z najspoľahlivejších, najbezpečnejších a bezstarostných operačných systémov.</p>
+    <p>Od smartfónov po autá, superpočítače a domáce spotrebiče, domáce desktopy až po podnikové servery, operačný systém Linux je všade.</p>
 
+    <p>Ale okrem toho, že Linux je platformou desktopov, serverov a vstavaných systémov na celom svete, je jedným z najspoľahlivejších, najbezpečnejších a bezstarostných operačných systémov.</p>
+
+    <!-- Accordions -->
     <div class="accordion">
         <?php
             $linuxInfoObject = new LinuxInfo();
             $linuxInfo = $linuxInfoObject->select();
 
+            // Vygenerovať accordions
             for ($i = 0; $i < count($linuxInfo); $i++) {
             echo '<div class="accordion-button">'.$linuxInfo[$i]->title.'</div>';
             echo '<div class="accordion-content"">';

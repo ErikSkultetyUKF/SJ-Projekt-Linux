@@ -11,6 +11,7 @@
         $contentCreatorObject = new ContentCreator();
         $contentCreator = $contentCreatorObject->select();
 
+        // Vygenerovať tvorcov
         for ($i = 0; $i < count($contentCreator); $i++) {
             echo('<div class="gallery">');
             echo('<a href="'.$contentCreator[$i]->link.'" target="_blank">');
@@ -27,6 +28,7 @@
         $popularWebstrankaObject = new PopularWebpage();
         $popularWebstranka = $popularWebstrankaObject->select();
 
+        // Vygenerovať stránky
         for ($i = 0; $i < count($popularWebstranka); $i++) {
             echo('<div class="gallery">');
             echo('<a href="'.$popularWebstranka[$i]->link.'" target="_blank">');

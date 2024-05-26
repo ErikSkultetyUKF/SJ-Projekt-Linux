@@ -18,6 +18,7 @@
             $distributionObject = new Distribution();
             $distribution = $distributionObject->select();
 
+            //Vygenerovať distribúcie
             for ($i = 0; $i < count($distribution); $i++) {
                 echo('<div class="gallery">');
                 echo('<a href="../templates/distribution.php?id='.$distribution[$i]->id.'">');

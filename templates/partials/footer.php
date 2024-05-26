@@ -12,14 +12,17 @@
         <!-- Copyright -->
         <div>
             <h3>Zdrojový kód:</h3>
+
             <p><a href="https://github.com/ErikSkultetyUKF/Skultety-SJ-Projekt-Linux" target="_blank">https://github.com/ErikSkultetyUKF/Skultety-SJ-Projekt-Linux</a></p>
+
             <h3>Vytvorené pre vzdelávacie účely</h3>
+
             <p><b>©2023-2024 Vytvoril a nadizajnoval: Erik Škultéty</b></p>
         </div>
     </div>
 </footer>
 
-<!-- Pridať js skripty -->
+<!-- Pridať js skripty podľa názvu súbora -->
 <?php
     $pageName = basename($_SERVER["SCRIPT_NAME"],'.php');
     $pageObject = new Page($pageName);

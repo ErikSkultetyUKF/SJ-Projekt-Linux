@@ -7,6 +7,7 @@
         private $userName = 'root';
         private $password = '';
 
+        // Spojenie s db
         protected function dbConnection() {
             try {
                 $connection = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbName . ";charset=utf8", 

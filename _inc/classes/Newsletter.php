@@ -8,6 +8,7 @@
             $this->db = $this->dbConnection();
         }
         
+        // Vybrať všetky newslettery z db
         public function select() {
             try {
                 $sql = "SELECT * FROM newsletters";
@@ -20,6 +21,7 @@
             }   
         }
 
+        // Vybrať jeden newsletter z db
         public function selectSingle($newsletterId) {
             try {
                 $data = array(
@@ -30,14 +32,14 @@
                 $queryRun->execute($data);
                 
                 $newsletterData = $queryRun->fetch();
-                
                 return $newsletterData; 
   
-          } catch(PDOException $e) {   
-                echo $e->getMessage();
-          } 
-      }
+            } catch(PDOException $e) {   
+                    echo $e->getMessage();
+            } 
+        }
 
+        // Vložiť kontakt do db
         public function insert() {
             if($this->db) {
                 if(isset($_POST['newsletterSubmit'])) {
@@ -64,6 +66,8 @@
                     echo '<p>Nebolo nadviazané spojenie</p>';
             }
         }
+
+        // Odstrániť newsletter z db
         public function delete() {
             try {
                 $data = array(
@@ -77,7 +81,8 @@
                 echo $e->getMessage();
             }
         }
-  
+ 
+        // Upraviť newsletter v db 
         public function edit($newsletterId, $newData) {
             try {
                 $data = array(
@@ -90,8 +95,7 @@
                 $query = "UPDATE newsletters SET title = :newsletterTitle, author = :newsletterAuthor, text = :newsletterText WHERE id = :newsletterId";
                 $queryRun = $this->db->prepare($query);
                 $queryRun->execute($data);
-             
-    
+
             } catch(PDOException $e) {
                 echo $e->getMessage();
             }

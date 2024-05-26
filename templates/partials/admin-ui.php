@@ -5,13 +5,14 @@
     $contactObject = new Contact();
     $contacts = $contactObject->select();
 
+    // Odstránenie kontaktu
     if(isset($_POST['deleteContact'])){
         $contactId = $_POST['deleteContact'];
         $contactObject->delete($contactId);
         header('Location: profile.php');
-        die();
     }
 
+    // Vygenerovať hlavičku tabluľky
     echo '<table class="text-center">';
     echo '<tr>
             <th>Meno</th>
@@ -22,17 +23,20 @@
             <th>Vymazať</th>
         </tr>';
 
+    // Vygenerovať riadky
     foreach($contacts as $c){
         echo '<tr>';
         echo '<td>'.$c->name;'</td>';
         echo '<td>'.$c->email;'</td>';
         echo '<td>'.$c->message;'</td>';
         echo '<td>'.$c->accept_status;'</td>';
+        // Tlačidlo upraviť
         echo '<td>
                 <form class="text-center" action="contact-update.php" method="POST">
                     <button class="table-button" type="submit" name="editContact" value="'.$c->id.'"'.'><img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/edit.png" class="table-button"></button>
                 </form>
                 </td>';
+        // Tlačidlo odstrániť
         echo '<td>
                 <form class="text-center" action="" method="POST">
                     <button class="table-button" type="submit" name="deleteContact" value="'.$c->id.'"'.'><img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/delete.png" class="table-button"></button>

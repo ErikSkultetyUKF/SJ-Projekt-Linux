@@ -1,45 +1,50 @@
 <?php
     include_once('partials/header.php');
 
+    // Používateľ je prihlásený
     if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
         header('Location: profile.php');
     }
-?> 
-    <main>
-        <div class="form-box text-center margin-middle-7">
-            <h1>Prihlásenie</h1><br>
-            <form action="" method="POST">
 
-                <label for="email">E-mail:</label><br>
-                <input type="email" class="entry" style="width: 60%;" name="email" placeholder="meno@priklad.org"><br>
+    // Prihlásenie
+    if(isset($_POST['userLogin'])){
+        $email = $_POST['email'];
+        $password = $_POST['password']; 
 
-                <label for="password">Heslo:</label><br>
-                <input type="password" class="entry" style="width: 60%;" name="password" placeholder="Heslo"><br><br><br>
+        $userObject = new User();
+        $loginSuccess = $userObject->login($email,$password);
 
-                <input type="submit" class="submit" value="Prihlásiť sa" name="userLogin">
+        // Používateľ je zaregistrovaný
+        if($loginSuccess == true) {
+            header('Location: profile.php');
+        } else {
+            echo '<p>Nesprávne meno alebo heslo</p>';
+        }
+    }
+?>
 
-            </form>
-        </div>
-        <?php
+<main>
+    <div class="form-box text-center margin-middle-7">
+        <h1>Prihlásenie</h1><br>
 
-            if(isset($_POST['userLogin'])){
-                $email = $_POST['email'];
-                $password = $_POST['password']; 
+        <!-- Formulár -->
+        <form action="" method="POST">
 
-                $userObject = new User();
+            <!-- Email -->
+            <label for="email">E-mail:</label><br>
+            <input type="email" class="entry" style="width: 60%;" name="email" placeholder="meno@priklad.org"><br>
 
-                $loginSuccess = $userObject->login($email,$password);
-                if($loginSuccess == true) {
-                    header('Location: profile.php');
-                    die();
-                } else {
-                    echo '<p>Nesprávne meno alebo heslo</p>';
-                }
+            <!-- Heslo -->
+            <label for="password">Heslo:</label><br>
+            <input type="password" class="entry" style="width: 60%;" name="password" placeholder="Heslo"><br><br><br>
 
-            }
-        ?>
-    </main>
-    
+            <!-- Prihlásiť sa -->
+            <input type="submit" class="submit" value="Prihlásiť sa" name="userLogin">
+
+        </form>
+    </div>
+</main>
+
 <?php
     include_once('partials/footer.php')
 ?> 

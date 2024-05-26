@@ -8,6 +8,7 @@
             $this->pages = $pages;
         }
 
+        // Vygenerovať menu
         function generateMenu(): string {
             $menuItems = '';
             

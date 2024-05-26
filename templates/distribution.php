@@ -2,10 +2,12 @@
     include_once('partials/header.php');
 ?> 
 <main>
-    <?php    
+    <?php
+        // Vybrať distribúciu z db
         $distributionObject = new Distribution();
         $distributionSingle = $distributionObject->selectSingle($_GET['id']);
 
+        // Vygenerovať distribúciu
         echo '<div id="distro-heading">';
         echo '<img id="logo" src="'.$distributionSingle->logo.'" alt="'.$distributionSingle->logo_description.'">';
         echo '<h1>'.$distributionSingle->name.'</h1>';

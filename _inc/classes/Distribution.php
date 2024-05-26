@@ -8,7 +8,7 @@
             $this->db = $this->dbConnection();
         }
 
-        // Vybrať všetky informácie z db
+        // Vybrať všetky distribúcie z db
         public function select() {
             try {
                 $sql = "SELECT * FROM distributions";
@@ -21,6 +21,7 @@
             }   
         }
 
+        // Vybrať jednu distribúciu z db
         public function selectSingle($id) {
             try {
                 $sql = "SELECT * FROM distributions WHERE id = ?";
@@ -33,7 +34,6 @@
                 } else {
                     header("HTTP/1.0 400 Bad Request");
                     header("Location: 404.php");
-                    die();
                 }
 
             } catch(PDOException $e) {

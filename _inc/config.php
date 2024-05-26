@@ -1,5 +1,6 @@
 <?php
 
+// Zadefinovanie informácii o db
 define('DATABASE', [
     'HOST' => 'localhost',
     'DBNAME' => 'Skultety-SJ-Projekt-Linux',
@@ -7,6 +8,7 @@ define('DATABASE', [
     'PASSWORD' => ''
 ]);
 
+// Require classes
 require_once('classes/Database.php');
 require_once('classes/Contact.php');
 require_once('classes/ContentCreator.php');
@@ -19,5 +21,6 @@ require_once('classes/PopularWebpage.php');
 require_once('classes/Slideshow.php');
 require_once('classes/User.php');
 
+// Vytvoriť session
 session_start();
 ?>

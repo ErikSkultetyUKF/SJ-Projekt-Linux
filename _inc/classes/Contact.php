@@ -8,6 +8,7 @@
             $this->db = $this->dbConnection();
         }
         
+        // Vybrať všetky kontakty z db
         public function select() {
             try {
                 $sql = "SELECT * FROM contact";
@@ -20,6 +21,7 @@
             }   
         }
 
+        // Vybrať jeden kontakt z db
         public function selectSingle($contactId) {
             try {
                 $data = array(
@@ -30,14 +32,14 @@
                 $queryRun->execute($data);
                 
                 $contactData = $queryRun->fetch();
-                
                 return $contactData; 
   
-          } catch(PDOException $e) {   
-                echo $e->getMessage();
-          } 
-      }
+            } catch(PDOException $e) {   
+                    echo $e->getMessage();
+            } 
+        }
 
+        // Vložiť kontakt do db
         public function insert() {
             if($this->db) {
                 if(isset($_POST['submitted'])) {
@@ -65,6 +67,8 @@
                     echo '<p>Nebolo nadviazané spojenie</p>';
             }
         }
+
+        // Odstrániť kontakt z db
         public function delete() {
             try {
                 $data = array(
@@ -78,7 +82,8 @@
                 echo $e->getMessage();
             }
         }
-  
+
+        // Upraviť kontakt v db
         public function edit($contactId, $newData) {
             try {
                 $data = array(

@@ -8,6 +8,7 @@
             $this->pageName = $pageName;
         }
 
+        // Pridať štýly
         function addStylesheets() {
             echo('<link rel="stylesheet" href="../assets/css/style.css">');
             echo('<link rel="stylesheet" href="../assets/css/desktop.css">');
@@ -44,6 +45,7 @@
             } 
         }
 
+        // Pridať skripty
         function addScripts() {
             echo('<script src="../assets/js/script.js"></script>');
 
