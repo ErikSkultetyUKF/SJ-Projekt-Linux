@@ -17,7 +17,7 @@
         $pageObject->addStylesheets();
     ?>
 
-    <link rel="icon" href="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png">
+    <link rel="icon" href="../assets/img/misc/tux.png">
     <title>Linux</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
 
         <!-- Logo -->
         <a href="home.php" style="padding: 0px;">
-            <span><img id="logo" src="/Skultety-SJ-Projekt-Linux/assets/img/misc/tux.png" alt="ikona-maskot-linuxu"></span>
+            <span><img id="logo" src="../assets/img/misc/tux.png" alt="ikona-maskot-linuxu"></span>
         </a>
 
         <!-- Menu -->
@@ -61,7 +61,7 @@
 
         <!-- Hamburger menu -->
         <a href="javascript:void(0);" class="icon" style="padding: 1rem 1.5rem;" onclick="showHamburgerMenu()">
-            <span><img src="/Skultety-SJ-Projekt-Linux/assets/img/misc/menu.png" alt="ikona-menu"></span>
+            <span><img src="../assets/img/misc/menu.png" alt="ikona-menu"></span>
         </a>
     </div>
 </header>

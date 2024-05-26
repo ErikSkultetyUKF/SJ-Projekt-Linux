@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 21, 2024 at 10:53 AM
+-- Generation Time: May 26, 2024 at 12:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -67,12 +67,12 @@ CREATE TABLE `content_creators` (
 --
 
 INSERT INTO `content_creators` (`id`, `name`, `link`, `image`, `image_description`) VALUES
-(1, 'The Linux Experiment (YouTube)', 'https://youtube.com/channel/UC5UAwBUum7CPN5buc-_N1Fw/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/the-linux-experiment.png', 'the-linux-experiment-logo'),
-(2, 'Learn Linux TV (YouTube)', 'https://youtube.com/channel/UCxQKHvKbmSzGMvUrVtJYnUA/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/learn-linux-tv.png', 'learn-linux-tv-logo'),
-(3, 'DistroTube (YouTube)', 'https://youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/distrotube.png', 'distrotube-logo'),
-(4, 'TechHut (YouTube)', 'https://youtube.com/channel/UCjSEJkpGbcZhvo0lr-44X_w/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/techhut.png', 'techhut-logo'),
-(5, 'Linux Tex (Youtube)', 'https://youtube.com/channel/UCS25Y-2DUke9uOU5OtLwwgg', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/linux-tex.png', 'linux-tex-logo'),
-(6, 'Chris Titus Tech (YouTube)', 'https://youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ/', '/Skultety-SJ-Projekt-Linux/assets/img/community/content-creators/ctt.png', 'chris-titus-tech-logo');
+(1, 'The Linux Experiment (YouTube)', 'https://youtube.com/channel/UC5UAwBUum7CPN5buc-_N1Fw/', '../assets/img/community/content-creators/the-linux-experiment.png', 'the-linux-experiment-logo'),
+(2, 'Learn Linux TV (YouTube)', 'https://youtube.com/channel/UCxQKHvKbmSzGMvUrVtJYnUA/', '../assets/img/community/content-creators/learn-linux-tv.png', 'learn-linux-tv-logo'),
+(3, 'DistroTube (YouTube)', 'https://youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg/', '../assets/img/community/content-creators/distrotube.png', 'distrotube-logo'),
+(4, 'TechHut (YouTube)', 'https://youtube.com/channel/UCjSEJkpGbcZhvo0lr-44X_w/', '../assets/img/community/content-creators/techhut.png', 'techhut-logo'),
+(5, 'Linux Tex (Youtube)', 'https://youtube.com/channel/UCS25Y-2DUke9uOU5OtLwwgg', '../assets/img/community/content-creators/linux-tex.png', 'linux-tex-logo'),
+(6, 'Chris Titus Tech (YouTube)', 'https://youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ/', '../assets/img/community/content-creators/ctt.png', 'chris-titus-tech-logo');
 
 -- --------------------------------------------------------
 
@@ -96,11 +96,11 @@ CREATE TABLE `distributions` (
 --
 
 INSERT INTO `distributions` (`id`, `name`, `description`, `image`, `image_description`, `logo`, `logo_description`, `website`) VALUES
-(1, 'Linux Mint', 'Linux Mint sa stal jednou z najlepších distribúcií pre začínajúcich používateľov Linuxu vďaka jednoduchému použitiu. Je to operačný systém založený na Ubuntu, ktorý je vhodný na každodenné používanie a hranie hier. Vďaka pocitu Mintu ako Windows sa používatelia, ktorí prechádzajú z Windowsu, cítia ako doma a je jedným z hlavných predajných bodov distribúcie.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/mint.png', 'linux-mint', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/mint.svg', 'linux-mint-logo', 'https://linuxmint.com/'),
-(2, 'Manjaro', 'Manjaro sa špeciálne zameriava na dostupnosť a užívateľskú prívetivosť. Vyznačuje sa rolovacím uvoľňovacím modelom. Jeho jednoduchosť, stabilita a výkon z neho robí vhodnú alternatívu OS k MacOS a Windows. Ponúka viacero desktopových prostredí.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/manjaro.png', 'manjaro', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/manjaro.svg', 'manjaro-logo', 'https://manjaro.org/'),
-(3, 'Fedora', 'Fedora, postavená a udržiavaná projektom Fedora (a sponzorovaná Red Hat), celosvetovou komunitou dobrovoľníkov a vývojárov, je už roky jednou z najpoužívanejších distribúcií. Snáď najvýraznejšou charakteristikou Fedory je, že je vždy na čele integrácie nových verzií balíkov a technológií do distribúcie.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/fedora.png', 'fedora', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/fedora.svg', 'fedora-logo', 'https://fedoraproject.org/'),
-(4, 'Debian', 'Debian je rozšírenou alternatívou pre používateľov, ktorí chcú maximálnu odolnosť a dôveryhodnosť. Funguje od roku 1993 a stále pravidelne uvádza na trh najnovšie verzie. Počas životnosti každého balíka poskytuje racionálnu predvolenú konfiguráciu a časté aktualizácie zabezpečenia. Okrem toho Debian slúži ako framework pre mnohé známe distribúcie Linuxu, najmä Ubuntu, Knoppix, PureOS a Tails.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/debian.png', 'debian', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/debian.svg', 'debian-logo', 'https://www.debian.org/'),
-(5, 'OpenSUSE Leap', 'OpenSUSE Leap je zameraná na profesionálne použitie. Je založená na SUSE Linux Enterprise Server a bola vytvorená s cieľom poskytnúť robustný, dôveryhodný a bezpečný operačný systém. OpenSUSE Leap tiež prichádza s množstvom nástrojov, ktoré sú navrhnuté tak, aby zefektívnili vašu prácu. Má ďalšie funkcie, ktoré z neho robia fantastickú možnosť pre podniky. V prvom rade ide o veľmi stabilnú distribúciu.', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/opensuse-leap.png', 'opensuse-leap', '/Skultety-SJ-Projekt-Linux/assets/img/distributions/logo/opensuse-leap.svg', 'opensuse-leap-logo', 'https://www.opensuse.org/');
+(1, 'Linux Mint', 'Linux Mint sa stal jednou z najlepších distribúcií pre začínajúcich používateľov Linuxu vďaka jednoduchému použitiu. Je to operačný systém založený na Ubuntu, ktorý je vhodný na každodenné používanie a hranie hier. Vďaka pocitu Mintu ako Windows sa používatelia, ktorí prechádzajú z Windowsu, cítia ako doma a je jedným z hlavných predajných bodov distribúcie.', '../assets/img/distributions/mint.png', 'linux-mint', '../assets/img/distributions/logo/mint.svg', 'linux-mint-logo', 'https://linuxmint.com/'),
+(2, 'Manjaro', 'Manjaro sa špeciálne zameriava na dostupnosť a užívateľskú prívetivosť. Vyznačuje sa rolovacím uvoľňovacím modelom. Jeho jednoduchosť, stabilita a výkon z neho robí vhodnú alternatívu OS k MacOS a Windows. Ponúka viacero desktopových prostredí.', '../assets/img/distributions/manjaro.png', 'manjaro', '../assets/img/distributions/logo/manjaro.svg', 'manjaro-logo', 'https://manjaro.org/'),
+(3, 'Fedora', 'Fedora, postavená a udržiavaná projektom Fedora (a sponzorovaná Red Hat), celosvetovou komunitou dobrovoľníkov a vývojárov, je už roky jednou z najpoužívanejších distribúcií. Snáď najvýraznejšou charakteristikou Fedory je, že je vždy na čele integrácie nových verzií balíkov a technológií do distribúcie.', '../assets/img/distributions/fedora.png', 'fedora', '../assets/img/distributions/logo/fedora.svg', 'fedora-logo', 'https://fedoraproject.org/'),
+(4, 'Debian', 'Debian je rozšírenou alternatívou pre používateľov, ktorí chcú maximálnu odolnosť a dôveryhodnosť. Funguje od roku 1993 a stále pravidelne uvádza na trh najnovšie verzie. Počas životnosti každého balíka poskytuje racionálnu predvolenú konfiguráciu a časté aktualizácie zabezpečenia. Okrem toho Debian slúži ako framework pre mnohé známe distribúcie Linuxu, najmä Ubuntu, Knoppix, PureOS a Tails.', '../assets/img/distributions/debian.png', 'debian', '../assets/img/distributions/logo/debian.svg', 'debian-logo', 'https://www.debian.org/'),
+(5, 'OpenSUSE Leap', 'OpenSUSE Leap je zameraná na profesionálne použitie. Je založená na SUSE Linux Enterprise Server a bola vytvorená s cieľom poskytnúť robustný, dôveryhodný a bezpečný operačný systém. OpenSUSE Leap tiež prichádza s množstvom nástrojov, ktoré sú navrhnuté tak, aby zefektívnili vašu prácu. Má ďalšie funkcie, ktoré z neho robia fantastickú možnosť pre podniky. V prvom rade ide o veľmi stabilnú distribúciu.', '../assets/img/distributions/opensuse-leap.png', 'opensuse-leap', '../assets/img/distributions/logo/opensuse-leap.svg', 'opensuse-leap-logo', 'https://www.opensuse.org/');
 
 -- --------------------------------------------------------
 
@@ -164,12 +164,12 @@ CREATE TABLE `popular_webpages` (
 --
 
 INSERT INTO `popular_webpages` (`id`, `name`, `link`, `image`, `image_description`) VALUES
-(1, 'It\'s FOSS', 'https://itsfoss.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/itsfoss.png', 'its-foss-logo'),
-(2, '9to5linux', 'https://9to5linux.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/9to5linux.png', '9to5linux-logo'),
-(3, 'How-To Geek (Linux Category)', 'https://www.howtogeek.com/category/linux/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/htg-logo.png', 'how-to-geek-logo'),
-(4, 'OMG! Ubuntu', 'https://omgubuntu.co.uk/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/omg-ubuntu.png', 'omg-ubuntu-logo'),
-(5, 'Ask Ubuntu', 'https://askubuntu.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/ask-ubuntu.png', 'ask-ubuntu-logo'),
-(6, 'nixCraft', 'https://nixcraft.com/', '/Skultety-SJ-Projekt-Linux/assets/img/community/webpages/nixcraft.png', 'nixcraft-logo');
+(1, 'It\'s FOSS', 'https://itsfoss.com/', '../assets/img/community/webpages/itsfoss.png', 'its-foss-logo'),
+(2, '9to5linux', 'https://9to5linux.com/', '../assets/img/community/webpages/9to5linux.png', '9to5linux-logo'),
+(3, 'How-To Geek (Linux Category)', 'https://www.howtogeek.com/category/linux/', '../assets/img/community/webpages/htg-logo.png', 'how-to-geek-logo'),
+(4, 'OMG! Ubuntu', 'https://omgubuntu.co.uk/', '../assets/img/community/webpages/omg-ubuntu.png', 'omg-ubuntu-logo'),
+(5, 'Ask Ubuntu', 'https://askubuntu.com/', '../assets/img/community/webpages/ask-ubuntu.png', 'ask-ubuntu-logo'),
+(6, 'nixCraft', 'https://nixcraft.com/', '../assets/img/community/webpages/nixcraft.png', 'nixcraft-logo');
 
 -- --------------------------------------------------------
 
@@ -188,8 +188,8 @@ CREATE TABLE `slides` (
 --
 
 INSERT INTO `slides` (`id`, `image`, `image_description`) VALUES
-(1, '/Skultety-SJ-Projekt-Linux/assets/img/slider/tux.svg', 'maskot-linuxu'),
-(2, '/Skultety-SJ-Projekt-Linux/assets/img/slider/tux2.png', 'maskot-linuxu-neoficialne');
+(1, '../assets/img/slider/tux.svg', 'maskot-linuxu'),
+(2, '../assets/img/slider/tux2.png', 'maskot-linuxu-neoficialne');
 
 -- --------------------------------------------------------
 
@@ -272,7 +272,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `content_creators`
