@@ -2,7 +2,6 @@
     include_once("partials/header.php");
 ?>
 
-<link rel="stylesheet" href="../assets/css/form.css">
 <main>
     <?php
         // Kontakt bol odoslaný
