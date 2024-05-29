@@ -5,13 +5,14 @@
 
     // Registrácia
     if(isset($_POST['userRegister'])) {
+        $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirmPassword'];
 
         // Heslá sa zhodujú
         if($password === $confirmPassword) {
-            if($userObject->register($email, $password)) { // Zaregistrovanie
+            if($userObject->register($username, $email, $password)) { // Zaregistrovanie
                 echo "<p>Registrácia bola úspešná</p>";
 
                 $loginSuccess = $userObject->login($email,$password); // Automatické prihlásenie po zaregistrovaní
@@ -33,6 +34,10 @@
 
         <!-- Formulár -->
         <form action="" method="POST">
+
+            <!-- Username -->
+            <label for="username">Používateľské meno:</label><br>
+            <input type="text" class="entry" name="username" placeholder="Používateľské meno" required><br>
 
             <!-- Email -->
             <label for="email">E-mail:</label><br>

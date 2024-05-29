@@ -1,4 +1,3 @@
-<h1 class="text-center">Admin rozhranie</h1>
 <h1 class="text-center">Kontakty</h1>
 
 <?php
@@ -6,14 +5,14 @@
     $contacts = $contactObject->select();
 
     // Odstránenie kontaktu
-    if(isset($_POST['deleteContact'])){
+    if(isset($_POST['deleteContact'])) {
         $contactId = $_POST['deleteContact'];
         $contactObject->delete($contactId);
         header('Location: profile.php');
     }
 
     // Vygenerovať hlavičku tabluľky
-    echo '<table class="text-center">';
+    echo '<table class="text-center table-center margin-bottom-3">';
     echo '<tr>
             <th>Meno</th>
             <th>Email</th>
@@ -23,23 +22,25 @@
             <th>Vymazať</th>
         </tr>';
 
-    // Vygenerovať riadky
-    foreach($contacts as $c){
+    // Vygenerovať riadky tabuľky
+    foreach($contacts as $c) {
         echo '<tr>';
         echo '<td>'.$c->name;'</td>';
         echo '<td>'.$c->email;'</td>';
         echo '<td>'.$c->message;'</td>';
         echo '<td>'.$c->accept_status;'</td>';
-        // Tlačidlo upraviť
+
+        // Upraviť kontakt - Tlačidlo
         echo '<td>
                 <form class="text-center" action="contact-update.php" method="POST">
                     <button class="table-button" type="submit" name="editContact" value="'.$c->id.'"'.'><img src="../assets/img/misc/edit.png" class="table-button"></button>
                 </form>
                 </td>';
-        // Tlačidlo odstrániť
+
+        // Odstrániť kontakt - Tlačidlo
         echo '<td>
                 <form class="text-center" action="" method="POST">
-                    <button class="table-button" type="submit" name="deleteContact" value="'.$c->id.'"'.'><img src="../assets/img/misc/delete.png" class="table-button"></button>
+                    <button class="table-button" type="submit" name="deleteContact" value="'.$c->id.'"'.' onclick="return checkDelete()"><img src="../assets/img/misc/delete.png" class="table-button"></button>
                 </form>
                 </td>';
         echo '</tr>';

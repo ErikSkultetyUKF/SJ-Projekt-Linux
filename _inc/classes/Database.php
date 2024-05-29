@@ -2,10 +2,11 @@
 
     class Database {
 
-        private $host = 'localhost';
-        private $dbName = 'Skultety-SJ-Projekt-Linux';
-        private $userName = 'root';
-        private $password = '';
+        // Pridelenie zadefinovaných informácii o db
+        private $host = DATABASE['HOST'];
+        private $dbName = DATABASE['DBNAME'];
+        private $userName = DATABASE['USERNAME'];
+        private $password = DATABASE['PASSWORD'];
 
         // Spojenie s db
         protected function dbConnection() {

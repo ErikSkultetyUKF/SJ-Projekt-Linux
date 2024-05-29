@@ -40,39 +40,35 @@
         }
 
         // Vložiť kontakt do db
-        public function insert() {
+        public function insert($contactData) {
             if($this->db) {
-                if(isset($_POST['submitted'])) {
-                    $data = array(
-                        'contactName'=>$_POST['name'],
-                        'contactEmail'=>$_POST['email'],
-                        'contactMessage'=>$_POST['message'],
-                        'contactAcceptStatus'=>$_POST['acceptStatus'],
-                    );
+                $data = array(
+                    'contactName'=>$contactData['name'],
+                    'contactEmail'=>$contactData['email'],
+                    'contactMessage'=>$contactData['message'],
+                    'contactAcceptStatus'=>$contactData['acceptStatus'],
+                );
 
-                    try {
-                      $query = "INSERT INTO contact (name, email, message, accept_status) 
-                      VALUES (:contactName, :contactEmail, :contactMessage, :contactAcceptStatus)";
-                      $queryRun = $this->db->prepare($query);
-                      $queryRun->execute($data);    
+                try {
+                    $query = "INSERT INTO contact (name, email, message, accept_status) 
+                    VALUES (:contactName, :contactEmail, :contactMessage, :contactAcceptStatus)";
+                    $queryRun = $this->db->prepare($query);
+                    $queryRun->execute($data);    
 
-                    } catch (PDOException $e) {
-                      echo $e->getMessage();
-                    }
-
-                } else {
-                    echo '<p>Formulár nebol odoslaný</p>';
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
                 }
+
             } else {
                     echo '<p>Nebolo nadviazané spojenie</p>';
             }
         }
 
         // Odstrániť kontakt z db
-        public function delete() {
+        public function delete($contactId) {
             try {
                 $data = array(
-                    'contactId' => $_POST['deleteContact']
+                    'contactId' => $contactId
                 );
                 $query = "DELETE FROM contact WHERE id = :contactId";
                 $queryRun = $this->db->prepare($query);

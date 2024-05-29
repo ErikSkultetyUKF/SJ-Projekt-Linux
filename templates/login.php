@@ -32,11 +32,11 @@
 
             <!-- Email -->
             <label for="email">E-mail:</label><br>
-            <input type="email" class="entry" style="width: 60%;" name="email" placeholder="meno@priklad.org"><br>
+            <input type="email" class="entry" name="email" placeholder="meno@priklad.org"><br>
 
             <!-- Heslo -->
             <label for="password">Heslo:</label><br>
-            <input type="password" class="entry" style="width: 60%;" name="password" placeholder="Heslo"><br><br><br>
+            <input type="password" class="entry" name="password" placeholder="Heslo"><br><br><br>
 
             <!-- Prihlásiť sa -->
             <input type="submit" class="submit" value="Prihlásiť sa" name="userLogin">

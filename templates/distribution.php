@@ -8,7 +8,7 @@
         $distributionSingle = $distributionObject->selectSingle($_GET['id']);
 
         // Vygenerovať distribúciu
-        echo '<div id="distro-heading">';
+        echo '<div class="flex-center">';
         echo '<img id="logo" src="'.$distributionSingle->logo.'" alt="'.$distributionSingle->logo_description.'">';
         echo '<h1>'.$distributionSingle->name.'</h1>';
         echo '</div>';

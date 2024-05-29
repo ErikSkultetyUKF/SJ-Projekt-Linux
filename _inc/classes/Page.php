@@ -26,22 +26,10 @@
                 break; 
             case 'community':
                 echo('<link rel="stylesheet" href="../assets/css/gallery.css">');
-                break; 
-            case 'contact':
-                echo('<link rel="stylesheet" href="../assets/css/form.css">');
-                break; 
-            case 'contact-update':
-                echo('<link rel="stylesheet" href="../assets/css/form.css">');
-                break; 
-            case 'login':
-                echo('<link rel="stylesheet" href="../assets/css/form.css">');
-                break;  
-            case 'register':
-                echo('<link rel="stylesheet" href="../assets/css/form.css">');
-                break; 
-            case 'admin':
-                echo('<link rel="stylesheet" href="../assets/css/form.css">');
-                break; 
+                break;
+            case 'profile':
+                echo('<link rel="stylesheet" href="../assets/css/accordion.css">');
+                break;
             } 
         }
 
@@ -54,6 +42,9 @@
                 echo('<script src="../assets/js/slider.js"></script>');
                 break;
             case 'linux':
+                echo('<script src="../assets/js/accordion.js"></script>');
+                break;
+            case 'profile':
                 echo('<script src="../assets/js/accordion.js"></script>');
                 break;
             } 

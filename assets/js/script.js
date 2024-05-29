@@ -7,3 +7,7 @@ function showHamburgerMenu() {
         menu.classList.add("open"); // Otvoriť menu
     }
 }
+
+function checkDelete() {
+    return confirm("Ste si istí?");
+}
