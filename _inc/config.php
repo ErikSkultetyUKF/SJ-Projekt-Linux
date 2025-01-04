@@ -3,7 +3,7 @@
 // Zadefinovanie informácii o db
 define('DATABASE', [
     'HOST' => 'localhost',
-    'DBNAME' => 'Skultety-SJ-Projekt-Linux',
+    'DBNAME' => 'sj-projekt-linux',
     'USERNAME' => 'root',
     'PASSWORD' => ''
 ]);
